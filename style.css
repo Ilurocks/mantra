@@ -1881,13 +1881,17 @@ section {
 @media (min-width: 768px) {
   .about-mantra-section {
     background-image: url('assets/pune_city_skyline.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 120px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.about-mantra-section {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
