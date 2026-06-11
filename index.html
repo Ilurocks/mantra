@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantra Properties | Luxury Real Estate & Premium Residences</title>
+  <!-- Google Fonts: Playfair Display for headers, Montserrat for text & navigation -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Responsive Navbar -->
+  <header class="header">
+    <div class="nav-container">
+      
+      <!-- Left side: Hamburger Toggle & Logo -->
+      <div class="nav-left-group">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span class="bar bar-top"></span>
+          <span class="bar bar-bottom"></span>
+        </button>
+
+        <a href="#" class="logo" aria-label="Mantra Properties Home">
+          <div class="logo-wrapper">
+            <!-- Stylized wing leaf logo like Mantra -->
+            <svg class="logo-icon" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15,30 Q25,10 45,5 Q32,20 20,32 Z" fill="#ffffff" />
+              <path d="M22,30 Q34,12 55,8 Q41,22 28,32 Z" fill="#ffffff" opacity="0.8" />
+              <path d="M29,30 Q43,15 65,11 Q50,24 36,32 Z" fill="#ffffff" opacity="0.6" />
+            </svg>
+            <span class="logo-text">mantra</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation links (Desktop) -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#about" class="nav-link">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown mega-dropdown">
+            <a href="#projects" class="nav-link" id="residentialLink">
+              RESIDENTIAL 
+              <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="mega-menu">
+              <div class="mega-menu-container">
+                <!-- Card 1 -->
+                <a href="index.html" class="mega-card active-property" data-filter="residential">
+                  <div class="mega-card-img-wrapper">
+                    <img src="assets/mantra_melange.png" alt="Mantra Melange">
+                  </div>
+                  <h4 class="mega-card-title">Mantra Melange</h4>
+                  <p class="mega-card-subtitle">Kharadi <span>•</span> Ongoing Project</p>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="#magnus-about" class="mega-card" data-filter="residential">
+                  <div class="mega-card-img-wrapper">
+                    <img src="assets/mantra_magnus.jpg" alt="Mantra Magnus">
+                  </div>
+                  <h4 class="mega-card-title">Mantra Magnus</h4>
+                  <p class="mega-card-subtitle">Mundhwa <span>•</span> Ongoing Project</p>
+                </a>
+
+
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Right-side Actions -->
+      <div class="nav-actions">
+        <!-- Burgundy Badge -->
+        <a href="#burgundy" class="burgundy-badge">
+          <span class="burgundy-title">BURGUNDY</span>
+          <span class="burgundy-brand">
+            <span class="burgundy-mantra">mantra</span>
+            <span class="burgundy-line"></span>
+          </span>
+        </a>
+
+        <!-- Enquire Button -->
+        <button class="btn-enquire" id="btnNavEnquire" aria-label="Open Enquiry Form">
+          <span>ENQUIRE</span>
+          <svg class="icon-mail" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <!-- WhatsApp Icon -->
+        <a href="https://wa.me/919168890222?text=Hello%2C%20I%20am%20interested%20in%20Mantra%20properties.%20Please%20share%20more%20details." class="btn-phone" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+          <svg class="icon-call" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay (drawer style) -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <span class="drawer-title">MENU</span>
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="#about" class="drawer-link">ABOUT US</a></li>
+      <li class="drawer-dropdown-wrapper">
+        <button class="drawer-dropdown-btn">
+          RESIDENTIAL
+          <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="drawer-submenu">
+          <a href="index.html" class="drawer-sublink" data-filter="residential">Mantra Melange</a>
+          <a href="#magnus-about" class="drawer-sublink" data-filter="residential">Mantra Magnus</a>
+        </div>
+      </li>
+
+      <li><a href="#burgundy" class="drawer-link burgundy-text">BURGUNDY DIVISION</a></li>
+      <li><a href="#enquire" class="drawer-link">ENQUIRE NOW</a></li>
+    </ul>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg active"
+      style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.35)), url('assets/mantra_melange.png');"
+      data-title="Mantra Melange"
+      data-brand-main="MELANGE"
+      data-brand-sub="KHARADI RIVERSIDE"
+      data-details-top="2 &amp; 3 BHK Homes at Kharadi"
+      data-details-title="Riverside, Pune"
+      data-details-status="Ongoing Project"
+      data-enquire="#enquire"
+      data-scroll="#enquire">
+    </div>
+    <div class="hero-bg"
+      style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial Cam.jpg');"
+      data-title="Mantra Magnus"
+      data-brand-main="MAGNUS"
+      data-brand-sub="ELITE MUNDHWA"
+      data-details-top="2 &amp; 3 BHK Homes at Mundhwa"
+      data-details-title="Premium, Pune"
+      data-details-status="Ongoing Project"
+      data-enquire="#enquire"
+      data-scroll="#enquire">
+    </div>
+
+
+    <div class="hero-center-content">
+      <h1 class="hero-main-title" id="heroTitle">Mantra Melange</h1>
+    </div>
+
+    <!-- Floating Project Info Panel at the Bottom -->
+    <div class="hero-info-panel">
+      <div class="panel-container">
+
+        <!-- Left Side -->
+        <div class="panel-left">
+          <div class="project-brand">
+            <span class="brand-small">mantra</span>
+            <h2 class="brand-main" id="heroBrandMain">MELANGE</h2>
+            <span class="brand-sub" id="heroBrandSub">KHARADI RIVERSIDE</span>
+          </div>
+          <div class="project-details">
+            <p class="details-top" id="heroDetailsTop">2 &amp; 3 BHK Homes at Kharadi</p>
+            <h3 class="details-title" id="heroDetailsTitle">Riverside, Pune</h3>
+            <p class="details-status" id="heroDetailsStatus">Ongoing Project</p>
+          </div>
+        </div>
+
+        <!-- Right Side: CTA Buttons -->
+        <div class="panel-right">
+          <a href="assets/RERA CER.pdf" target="_blank" rel="noopener noreferrer" class="btn-panel btn-outline-white">
+            <span>VIEW CERTIFICATE</span>
+            <svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <circle cx="12" cy="14" r="2"></circle>
+              <line x1="12" y1="16" x2="12" y2="18"></line>
+            </svg>
+          </a>
+          <a href="#enquire" class="btn-panel btn-outline-white" id="heroBrochureBtn">
+            <span>DOWNLOAD BROCHURE</span>
+            <svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a href="#enquire" class="btn-panel btn-solid-gold" id="heroEnquireBtn">
+            <span>ENQUIRE NOW</span>
+            <svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Slide dots -->
+    <div class="hero-dots" id="heroDots">
+      <span class="hero-dot active" data-index="0"></span>
+      <span class="hero-dot" data-index="1"></span>
+    </div>
+
+
+  </section>
+
+
+
+  <!-- About Us Section -->
+  <!-- About Us / Melange Lifestyle Section -->
+  <section id="about" class="about">
+    <!-- Full-Width Background Watermark Lines crossing behind the image -->
+    <div class="about-watermark" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Swooshes on the left -->
+        <path d="M-100 420 C180 320, 320 280, 520 380 C380 260, 220 220, -50 300" stroke="rgba(0,0,0,0.035)" stroke-width="1.5"/>
+        <path d="M-50 450 C230 350, 370 310, 570 410 C430 290, 270 250, 0 330" stroke="rgba(0,0,0,0.02)" stroke-width="1.5"/>
+        
+        <!-- Large Swooshes crossing behind the image -->
+        <path d="M420 540 C720 340, 1050 140, 1500 90 C1250 120, 900 220, 580 440" stroke="rgba(0,0,0,0.035)" stroke-width="1.5"/>
+        <path d="M470 570 C770 370, 1100 170, 1550 120 C1300 150, 950 250, 630 470" stroke="rgba(0,0,0,0.02)" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <div class="about-container">
+      <div class="about-grid">
+        <div class="about-info">
+          <span class="section-tag-dark">MANTRA MELANGE</span>
+          <h2 class="section-title-dark">An Elevated Lifestyle, Inspired by Nature</h2>
+          <p class="about-text-dark">Mantra Melange brings you closer to nature while surrounding you with modern, high-end comforts. Located in the premium riverside corridor of Kharadi, Pune, these luxury residences offer beautifully crafted 2 & 3 BHK apartments equipped with smart automation, natural ventilation, and absolute design precision.</p>
+          <p class="about-text-dark">Crafted for those who seek elegance, space, and comfort, Melange features premium outdoor landscapes and open dining spaces. Here, every single corner is a thoughtful reflection of what accentuates your elite lifestyle.</p>
+        </div>
+
+        <div class="about-visuals">
+          <div class="lifestyle-img-wrapper">
+            <img src="assets/1965-Qubit-Mantra-Kharadi_Cam_025 01.jpg" alt="Mantra Melange Outdoor Seating and Facade" class="lifestyle-img">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Mantra Magnus About Section -->
+  <section id="magnus-about" class="about magnus-about">
+    <!-- Full-Width Background Watermark Lines crossing behind the image -->
+    <div class="about-watermark" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Swooshes on the left -->
+        <path d="M-100 420 C180 320, 320 280, 520 380 C380 260, 220 220, -50 300" stroke="rgba(0,0,0,0.035)" stroke-width="1.5"/>
+        <path d="M-50 450 C230 350, 370 310, 570 410 C430 290, 270 250, 0 330" stroke="rgba(0,0,0,0.02)" stroke-width="1.5"/>
+        
+        <!-- Large Swooshes crossing behind the image -->
+        <path d="M420 540 C720 340, 1050 140, 1500 90 C1250 120, 900 220, 580 440" stroke="rgba(0,0,0,0.035)" stroke-width="1.5"/>
+        <path d="M470 570 C770 370, 1100 170, 1550 120 C1300 150, 950 250, 630 470" stroke="rgba(0,0,0,0.02)" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <div class="about-container">
+      <div class="about-grid">
+        <!-- Image on Left -->
+        <div class="about-visuals">
+          <div class="lifestyle-img-wrapper">
+            <img src="assets/Pathway Cam.jpg" alt="Mantra Magnus Exterior" class="lifestyle-img">
+          </div>
+        </div>
+
+        <!-- Content on Right -->
+        <div class="about-info">
+          <span class="section-tag-dark">MANTRA MAGNUS</span>
+          <h2 class="section-title-dark">Introducing Exclusive Tower</h2>
+          <p class="about-text-dark"><strong>Here’s where the already known luxury escalates to a whole new level.</strong> Step into a world where every corner whispers the language of luxury. Our newly launched towering edifice, a beacon of sophistication, is brought to life for the elite ones seeking nothing but the finest.</p>
+          <p class="about-text-dark">Come, belong to a lifestyle that complements and celebrates your exemplary achievements.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Project Highlights Section -->
+  <section id="project-highlights" class="highlights-section">
+    <div class="highlights-container">
+      <div class="highlights-header">
+        <span class="highlights-tag">FEATURES</span>
+        <h2 class="highlights-title">Project Highlights</h2>
+        <p class="highlights-subtitle">Explore the distinct premium features and specifications of our developments</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="highlights-tabs">
+        <button class="highlight-tab-btn active" data-target="highlight-melange">Mantra Melange</button>
+        <button class="highlight-tab-btn" data-target="highlight-magnus">Mantra Magnus</button>
+      </div>
+
+      <!-- Tab Content wrapper -->
+      <div class="highlights-content-wrapper">
+        
+        <!-- Tab 1 Content: Mantra Melange -->
+        <div class="highlight-pane active" id="highlight-melange">
+          <div class="highlight-grid">
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Riverside Kharadi Location</h3>
+              <p class="highlight-card-text">Situated in the prime riverside corridor of Kharadi, offering a peaceful natural ambiance alongside high-end connectivity to EON IT Park.</p>
+            </div>
+            
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Smart Home Automation</h3>
+              <p class="highlight-card-text">Residences are fully equipped with smart home controls, automated lighting, climate regulation, and advanced safety alerts.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Lucrative Investment</h3>
+              <p class="highlight-card-text">Kharadi is one of Pune's fastest-appreciating IT hubs, ensuring solid rental yield, capital growth, and long-term asset value.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Nature & Cross-Ventilation</h3>
+              <p class="highlight-card-text">Architecturally designed to maximize daylight, optimize airflow, and integrate green spaces into daily living.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2 Content: Mantra Magnus -->
+        <div class="highlight-pane" id="highlight-magnus">
+          <div class="highlight-grid">
+            
+            <!-- Card 1: Prime Mundhwa Location -->
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Prime Mundhwa Location</h3>
+              <p class="highlight-card-text">Situated at the junction of Mundhwa and Koregaon Park, offering seamless access to Pune's premium restaurants, shopping hotspots, and social destinations.</p>
+            </div>
+            
+            <!-- Card 2: Premium Residences -->
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="3" y1="15" x2="21" y2="15"></line>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Premium Layouts</h3>
+              <p class="highlight-card-text">Thoughtfully configured 3, 3.5 &amp; 4.5 BHK premium apartments and 5 BHK villas designed with large decks, optimal cross-ventilation, and maximum privacy.</p>
+            </div>
+
+            <!-- Card 3: Lucrative Investment -->
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">High Capital Growth</h3>
+              <p class="highlight-card-text">Located in one of Pune's fastest-developing luxury zones, ensuring high rental demand, massive appreciation potential, and solid long-term returns.</p>
+            </div>
+
+            <!-- Card 4: Elite Private Club -->
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Elite Private Club</h3>
+              <p class="highlight-card-text">Exclusive access to signature recreational amenities including a private mini theatre, poker lounge, health spa, and premium rooftop gathering spaces.</p>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Plans Section (Elevations & Master Plans) -->
+  <section id="project-plans" class="plans-section">
+    <div class="plans-container">
+      
+      <!-- Section Header -->
+      <div class="plans-header">
+        <span class="plans-tag">LAYOUTS</span>
+        <h2 class="plans-title">Elevations &amp; Master Plans</h2>
+        <p class="plans-subtitle">Visualize your future home with our high-resolution master plans and building elevations</p>
+      </div>
+
+      <!-- Level 1 Tabs (Projects) -->
+      <div class="plans-level1-tabs">
+        <button class="level1-tab-btn active" data-target="plan-melange">Mantra Melange</button>
+        <button class="level1-tab-btn" data-target="plan-magnus">Mantra Magnus</button>
+      </div>
+
+      <!-- Plans Content Wrapper -->
+      <div class="plans-content-wrapper">
+        
+        <!-- Melange Content Pane (Active by default) -->
+        <div class="plans-pane active" id="plan-melange">
+          <!-- Level 2 Tabs (Sub-tabs for Melange) -->
+          <div class="plans-level2-tabs">
+            <button class="level2-tab-btn active" data-target="melange-elevation">Elevations</button>
+            <button class="level2-tab-btn" data-target="melange-master">Master Plan</button>
+          </div>
+
+          <!-- Sub-tab Content Panes for Melange -->
+          <div class="sub-plans-wrapper">
+            
+            <!-- Melange Elevation Pane -->
+            <div class="sub-plans-pane active" id="melange-elevation">
+              <div class="plan-display-card" style="max-width: 1100px;">
+                <div class="elevation-grid-container">
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/Cam_01.jpg" alt="Panoramic Riverside Towers &amp; Landscape">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Panoramic Riverside Towers</h4>
+                      <p>Panoramic dusk perspective of the five iconic towers and surrounding green space</p>
+                    </div>
+                  </div>
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/1965-Qubit-Mantra-Kharadi_Cam_027.jpg" alt="Tower Facade &amp; Elevation">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Tower Facade &amp; Elevation</h4>
+                      <p>High-rise vertical perspective highlighting architectural details</p>
+                    </div>
+                  </div>
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/1965-Qubit-Mantra-Kharadi_Cam_010_.jpg" alt="Grand Entry Gated Archway">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Grand Gated Entrance</h4>
+                      <p>Designer entrance archway, drop-off plaza, and surrounding foliage</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Melange Master Plan Pane -->
+            <div class="sub-plans-pane" id="melange-master">
+              <div class="plan-display-card">
+                <div class="plan-img-wrapper">
+                  <img src="assets/1965-Qubit-Mantra-Kharadi_Cam_Top.jpg" alt="Mantra Melange Master Plan Layout">
+                </div>
+                <div class="plan-legend-panel">
+                  <h4 class="legend-header">AMENITIES &amp; KEY LOCATIONS:</h4>
+                  <div class="legend-grid">
+                    <div class="legend-col">
+                      <span>01. Riverside Jogging Track</span>
+                      <span>02. Kids Play Zone</span>
+                      <span>03. Smart Club House</span>
+                    </div>
+                    <div class="legend-col">
+                      <span>04. Rooftop Cafe &amp; Lounge</span>
+                      <span>05. Senior Citizens Area</span>
+                      <span>06. Swimming Pool</span>
+                    </div>
+                    <div class="legend-col">
+                      <span>07. Indoor Games Lobby</span>
+                      <span>08. Reading Lounge</span>
+                      <span>09. Open Dining Landscape</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Magnus Content Pane -->
+        <div class="plans-pane" id="plan-magnus">
+          <!-- Level 2 Tabs (Sub-tabs for Magnus) -->
+          <div class="plans-level2-tabs">
+            <button class="level2-tab-btn active" data-target="magnus-elevation">Elevations</button>
+            <button class="level2-tab-btn" data-target="magnus-master">Master Plan</button>
+          </div>
+
+          <!-- Sub-tab Content Panes for Magnus -->
+          <div class="sub-plans-wrapper">
+            
+            <!-- Magnus Elevation Pane -->
+            <div class="sub-plans-pane active" id="magnus-elevation">
+              <div class="plan-display-card" style="max-width: 1100px;">
+                <div class="elevation-grid-container">
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/Cam_13_Mantra Magnus.jpg" alt="Luxury Lobby &amp; Dining Plaza">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Luxury Lobby &amp; Dining Plaza</h4>
+                      <p>Sophisticated double-height entrance lobby and premium open-air dining decks</p>
+                    </div>
+                  </div>
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/Worm_s Eye.jpg" alt="Tower Facade Closeup">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Tower Facade Closeup</h4>
+                      <p>Worm's eye view highlighting the modern glass facade and designer balconies</p>
+                    </div>
+                  </div>
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/Mantra Magnus.jpg" alt="Exclusive Tower Dusk View">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Exclusive Tower Dusk View</h4>
+                      <p>Panoramic evening perspective of the soaring edifice and green gardens</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Magnus Master Plan Pane -->
+            <div class="sub-plans-pane" id="magnus-master">
+              <div class="plan-display-card">
+                <div class="plan-img-wrapper">
+                  <img src="assets/magnus_floor_plan_3bhk.jpg.png" alt="Mantra Magnus Master Plan Layout">
+                </div>
+                <div class="plan-legend-panel">
+                  <h4 class="legend-header">AMENITIES &amp; KEY LOCATIONS:</h4>
+                  <div class="legend-grid">
+                    <div class="legend-col">
+                      <span>01. Rooftop Party Terrace</span>
+                      <span>02. Elite Spa Room</span>
+                      <span>03. Guest Banquet Hall</span>
+                    </div>
+                    <div class="legend-col">
+                      <span>04. Multi-sports Court</span>
+                      <span>05. Kids Adventure Park</span>
+                      <span>06. Landscaped Reflexology</span>
+                    </div>
+                    <div class="legend-col">
+                      <span>07. Senior Citizen Pavilion</span>
+                      <span>08. Yoga &amp; Meditation Deck</span>
+                      <span>09. Tower Entrance Canopy</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project Amenities Section (Layout section k niche) -->
+  <section id="project-amenities" class="project-amenities-section">
+    <div class="amenities-box-container">
+      <h2 class="amenities-box-title">Amenities</h2>
+      
+      <!-- Property Tabs -->
+      <div class="amenities-property-tabs">
+        <button class="amenities-tab-btn active" data-target="amenities-melange">Mantra Melange</button>
+        <button class="amenities-tab-btn" data-target="amenities-magnus">Mantra Magnus</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="amenities-tab-contents">
+        
+        <!-- Mantra Melange Pane -->
+        <div class="amenities-pane active" id="amenities-melange">
+          <div class="amenities-slider-outer">
+            <div class="amenities-slider-inner" id="slider-melange-amenities">
+              
+              <!-- Amenity 1 -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    <path d="M12 17.5V14H8.5L5.5 18.5M12 14V9h3.5L18.5 18.5M12 9c0-1.5 1-2.5 2.5-2.5S17 7.5 17 9H12z"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Children's Cycling Track</span>
+              </div>
+
+              <!-- Amenity 2 -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 22H6M12 2v20M12 6c-2 0-3.5 1.5-3.5 3.5S10 13 12 13s3.5-1.5 3.5-3.5S14 6 12 6z"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Rubberised Jogging Track</span>
+              </div>
+
+              <!-- Amenity 3 -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 22h20"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Senior Citizens' area</span>
+              </div>
+
+              <!-- Amenity 4 -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 22h4M12 2v20M12 2L5 9h14L12 2z"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Kids' Play Area</span>
+              </div>
+
+              <!-- Amenity 5 -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8z"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Open Lawn</span>
+              </div>
+
+              <!-- Amenity 6 -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><line x1="12" y1="2" x2="12" y2="22"></line>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Tennis Court</span>
+              </div>
+
+              <!-- Amenity 7 -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Toddlers Play Area</span>
+              </div>
+
+            </div>
+          </div>
+          
+          <!-- Slider Navigation Arrows -->
+          <div class="amenities-arrows-container">
+            <button class="amenity-arrow-btn prev" id="btn-melange-amenities-prev" aria-label="Previous Amenities">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="amenity-arrow-btn next" id="btn-melange-amenities-next" aria-label="Next Amenities">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mantra Magnus Pane -->
+        <div class="amenities-pane" id="amenities-magnus">
+          <div class="amenities-slider-outer">
+            <div class="amenities-slider-inner" id="slider-magnus-amenities">
+              
+              <!-- Amenity 1: Mini Theatre -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Mini Theatre</span>
+              </div>
+
+              <!-- Amenity 2: Poker Room -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="6" width="11" height="15" rx="1.5" ry="1.5" transform="rotate(-15 3 6)"></rect>
+                    <rect x="10" y="3" width="11" height="15" rx="1.5" ry="1.5" transform="rotate(15 10 3)"></rect>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Poker Room</span>
+              </div>
+
+              <!-- Amenity 3: Private Party Area -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 3h12l-2 9H8L6 3z"></path>
+                    <line x1="12" y1="12" x2="12" y2="21"></line>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <path d="M12 9A3 3 0 0 1 9 6"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Private Party Area</span>
+              </div>
+
+              <!-- Amenity 4: Lounge -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 10V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"></path>
+                    <path d="M3 10a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8z"></path>
+                    <line x1="6" y1="18" x2="6" y2="21"></line>
+                    <line x1="18" y1="18" x2="18" y2="21"></line>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Lounge</span>
+              </div>
+
+              <!-- Amenity 5: Spa -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a15.3 15.3 0 0 1 4 7c0 4.5-4 8-4 8s-4-3.5-4-8a15.3 15.3 0 0 1 4-7z"></path>
+                    <path d="M6 14a10.3 10.3 0 0 1 8-5c2 0 4.5 1.5 4.5 4.5 0 3-3.5 5.5-3.5 5.5s-3-2.5-4.5-4a10.3 10.3 0 0 1-4.5-1z"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Spa</span>
+              </div>
+
+            </div>
+          </div>
+          
+          <!-- Slider Navigation Arrows -->
+          <div class="amenities-arrows-container">
+            <button class="amenity-arrow-btn prev" id="btn-magnus-amenities-prev" aria-label="Previous Amenities">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="amenity-arrow-btn next" id="btn-magnus-amenities-next" aria-label="Next Amenities">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pre-Launch & Exclusive Configurations Section -->
+  <section id="prelaunch-configurations" class="prelaunch-section">
+    <div class="prelaunch-container">
+      <h2 class="prelaunch-title">Pre-Launch &amp; Exclusive Configurations</h2>
+      <p class="prelaunch-subtitle">Explore upcoming opportunities and detailed property layouts for our premium projects</p>
+      
+      <!-- Property Selector Tabs -->
+      <div class="prelaunch-property-tabs">
+        <button class="prelaunch-tab-btn active" data-target="prelaunch-melange">Mantra Melange</button>
+        <button class="prelaunch-tab-btn" data-target="prelaunch-magnus">Mantra Magnus &amp; Marvilla</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="prelaunch-tab-contents">
+        
+        <!-- Mantra Melange Content -->
+        <div class="prelaunch-pane active" id="prelaunch-melange">
+          <div class="prelaunch-intro-card">
+            <div class="prelaunch-badge">EXCLUSIVE PRE-LAUNCH OPPORTUNITY</div>
+            <h3>Mantra Melange – New Towers</h3>
+            <p class="dear-team-intro">We are excited to announce the launch of the new towers at Mantra Melange, offering thoughtfully designed homes with premium amenities and excellent connectivity in East Pune.</p>
+            <p class="cta-short">Experience the perfect blend of luxury, convenience, and scenic beauty at Mantra Melange – a landmark residential project in Kharadi Riverside!</p>
+          </div>
+
+          <div class="prelaunch-details-grid">
+            <!-- Left Side: Pricing Table / Cards -->
+            <div class="prelaunch-prices-panel">
+              <h4 class="panel-title">Available Configurations &amp; Sizes</h4>
+              <div class="pricing-cards-grid">
+                <div class="price-info-card">
+                  <div class="card-header-row">
+                    <span class="config-type">2 BHK Layout A</span>
+                  </div>
+                  <div class="card-details-row">
+                    <span class="detail-label">Carpet Area:</span>
+                    <span class="detail-val">843 Sq.ft.</span>
+                  </div>
+                  <div class="card-footer-row" style="margin-top: 15px;">
+                    <button class="btn-enquire btn-trigger-enquiry" style="width: 100%; text-align: center; padding: 10px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                </div>
+
+                <div class="price-info-card">
+                  <div class="card-header-row">
+                    <span class="config-type">2 BHK Layout B</span>
+                  </div>
+                  <div class="card-details-row">
+                    <span class="detail-label">Carpet Area:</span>
+                    <span class="detail-val">884 Sq.ft.</span>
+                  </div>
+                  <div class="card-footer-row" style="margin-top: 15px;">
+                    <button class="btn-enquire btn-trigger-enquiry" style="width: 100%; text-align: center; padding: 10px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                </div>
+
+                <div class="price-info-card">
+                  <div class="card-header-row">
+                    <span class="config-type">3 BHK Layout A</span>
+                  </div>
+                  <div class="card-details-row">
+                    <span class="detail-label">Carpet Area:</span>
+                    <span class="detail-val">1098 Sq.ft.</span>
+                  </div>
+                  <div class="card-footer-row" style="margin-top: 15px;">
+                    <button class="btn-enquire btn-trigger-enquiry" style="width: 100%; text-align: center; padding: 10px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                </div>
+
+                <div class="price-info-card">
+                  <div class="card-header-row">
+                    <span class="config-type">3 BHK Layout B</span>
+                  </div>
+                  <div class="card-details-row">
+                    <span class="detail-label">Carpet Area:</span>
+                    <span class="detail-val">1177 Sq.ft.</span>
+                  </div>
+                  <div class="card-footer-row" style="margin-top: 15px;">
+                    <button class="btn-enquire btn-trigger-enquiry" style="width: 100%; text-align: center; padding: 10px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side: Key Highlights & Specs -->
+            <div class="prelaunch-specs-panel">
+              <h4 class="panel-title">Project Overview &amp; Building Details</h4>
+              
+              <div class="specs-mini-grid">
+                <div class="spec-mini-card">
+                  <span class="emoji-icon">🏗️</span>
+                  <div class="spec-info">
+                    <h5>8.75 Acres</h5>
+                    <p>11 Iconic Towers | 27 Floors</p>
+                  </div>
+                </div>
+                <div class="spec-mini-card">
+                  <span class="emoji-icon">🏡</span>
+                  <div class="spec-info">
+                    <h5>Spacious Living</h5>
+                    <p>2 &amp; 3 BHK Premium Homes</p>
+                  </div>
+                </div>
+                <div class="spec-mini-card">
+                  <span class="emoji-icon">🚀</span>
+                  <div class="spec-info">
+                    <h5>East Pune</h5>
+                    <p>Near IT Parks, Malls &amp; Schools</p>
+                  </div>
+                </div>
+                <div class="spec-mini-card">
+                  <span class="emoji-icon">🏢</span>
+                  <div class="spec-info">
+                    <h5>New Towers</h5>
+                    <p>3 BHK Optima &amp; 3 BHK Ultima</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="building-detail-list">
+                <div class="building-detail-item">
+                  <span class="bullet-gold">👉</span>
+                  <div class="detail-txt">
+                    <strong>Structure:</strong> Approx. 27 Storey Buildings
+                  </div>
+                </div>
+                <div class="building-detail-item">
+                  <span class="bullet-gold">👉</span>
+                  <div class="detail-txt">
+                    <strong>Configuration:</strong> 4 Flats &amp; 4 Lifts Per Floor
+                  </div>
+                </div>
+                <div class="building-detail-item">
+                  <span class="bullet-gold">🌟</span>
+                  <div class="detail-txt">
+                    <strong>Amenities:</strong> Gym, Co-Working, Yoga &amp; Zumba Studios, Library, Music/Podcast Room, Crèche, Cafeteria, Pool &amp; more!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mantra Magnus & Marvilla Content -->
+        <div class="prelaunch-pane" id="prelaunch-magnus">
+          
+          <div class="magnus-marvilla-grid">
+            
+            <!-- 1. Magnus Apartments Cards -->
+            <div class="magnus-section-box">
+              <div class="box-badge">MANTRA MAGNUS</div>
+              <h3 class="box-title">Apartment Configurations</h3>
+              
+              <div class="apartment-card-list">
+                <div class="apartment-spec-card">
+                  <div class="apartment-header">
+                    <h4>3 BHK Residences</h4>
+                    <button class="btn-enquire btn-trigger-enquiry" style="padding: 8px 16px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                  <div class="apartment-body">
+                    <div class="spec-row">
+                      <span>Carpet Area:</span>
+                      <strong>1134 / 1136 / 1146 sq.ft</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="apartment-spec-card">
+                  <div class="apartment-header">
+                    <h4>3.5 BHK Ultima</h4>
+                    <button class="btn-enquire btn-trigger-enquiry" style="padding: 8px 16px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                  <div class="apartment-body">
+                    <div class="spec-row">
+                      <span>Carpet Area:</span>
+                      <strong>1358 sq.ft</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="apartment-spec-card">
+                  <div class="apartment-header">
+                    <h4>4.5 BHK Ultima</h4>
+                    <button class="btn-enquire btn-trigger-enquiry" style="padding: 8px 16px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                  <div class="apartment-body">
+                    <div class="spec-row">
+                      <span>Carpet Area:</span>
+                      <strong>1687 sq.ft</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Magnus Garden Flats -->
+            <div class="magnus-section-box">
+              <div class="box-badge">EXCLUSIVE RARE UNITS</div>
+              <h3 class="box-title">Magnus Garden Flats</h3>
+              <p class="garden-intro-desc">Limited edition ground-level homes with private landscaped garden spaces.</p>
+              
+              <div class="garden-flats-grid">
+                
+                <!-- Flat F 204 -->
+                <div class="garden-flat-card">
+                  <div class="garden-card-header">
+                    <span class="flat-number">Unit F 204</span>
+                  </div>
+                  <div class="garden-card-specs">
+                    <div class="garden-spec-item">
+                      <span class="label">Carpet Area</span>
+                      <span class="val">1055 sq.ft</span>
+                    </div>
+                    <div class="garden-spec-item">
+                      <span class="label">Private Garden</span>
+                      <span class="val">524 sq.ft</span>
+                    </div>
+                    <div class="garden-spec-item">
+                      <span class="label">Total Area</span>
+                      <span class="val">1579 sq.ft</span>
+                    </div>
+                  </div>
+                  <div class="garden-card-footer" style="margin-top: 15px;">
+                    <button class="btn-enquire btn-trigger-enquiry" style="width: 100%; text-align: center; padding: 10px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                </div>
+
+                <!-- Flat G 101 -->
+                <div class="garden-flat-card">
+                  <div class="garden-card-header">
+                    <span class="flat-number">Unit G 101</span>
+                  </div>
+                  <div class="garden-card-specs">
+                    <div class="garden-spec-item">
+                      <span class="label">Carpet Area</span>
+                      <span class="val">1134 sq.ft</span>
+                    </div>
+                    <div class="garden-spec-item">
+                      <span class="label">Private Garden</span>
+                      <span class="val">445 sq.ft</span>
+                    </div>
+                    <div class="garden-spec-item">
+                      <span class="label">Total Area</span>
+                      <span class="val">1579 sq.ft</span>
+                    </div>
+                  </div>
+                  <div class="garden-card-footer" style="margin-top: 15px;">
+                    <button class="btn-enquire btn-trigger-enquiry" style="width: 100%; text-align: center; padding: 10px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast);">ENQUIRE NOW</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- 3. Mantra Marvilla Box -->
+            <div class="magnus-section-box marvilla-special-box">
+              <div class="box-badge marvilla-badge">ULTRA LUXURY</div>
+              <h3 class="box-title text-gold">Mantra Marvilla</h3>
+              <p class="marvilla-desc">Elite 5 BHK independent villas designed for ultimate privacy and grandeur.</p>
+              
+              <div class="marvilla-specs-card">
+                <div class="marvilla-main-header">
+                  <span class="marvilla-type">5 BHK Luxury Villa</span>
+                </div>
+                
+                <div class="marvilla-specs-grid">
+                  <div class="m-spec">
+                    <span class="m-label">Carpet Area</span>
+                    <span class="m-val">3037 sq.ft</span>
+                  </div>
+                  <div class="m-spec">
+                    <span class="m-label">Plot Area</span>
+                    <span class="m-val">1800 sq.ft</span>
+                  </div>
+                  <div class="m-spec">
+                    <span class="m-label">Parking Spaces</span>
+                    <span class="m-val">5 Covered</span>
+                  </div>
+                  <div class="m-spec">
+                    <span class="m-label">Expected Possession</span>
+                    <span class="m-val font-gold">June 2027</span>
+                  </div>
+                </div>
+
+                <button class="btn-enquire btn-trigger-enquiry" style="width: 100%; text-align: center; padding: 12px; font-size: 12px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; margin-top: 25px; transition: var(--transition-fast);">ENQUIRE NOW</button>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Video Showcase Section -->
+  <section class="video-showcase" id="video-showcase">
+    <div class="video-container">
+      <h2 class="video-title">Step into a World of Elegance</h2>
+
+      <!-- Video Tab Buttons -->
+      <div class="video-tabs">
+        <button class="video-tab-btn active" data-target="video-melange">Mantra Melange</button>
+        <button class="video-tab-btn" data-target="video-magnus">Mantra Magnus</button>
+      </div>
+
+      <!-- Video Tab Contents -->
+      <div class="video-tab-contents">
+        <!-- Melange Video Pane -->
+        <div class="video-pane active" id="video-melange">
+          <div class="video-tagline-wrapper">
+            <span class="video-tagline">Mantra Melange | Exclusive Show Apartment Walkthrough</span>
+          </div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ZoUf1_Vvj4o" title="Mantra Melange - Kharadi Riverside | Project Tour of Pune's Next Landmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Magnus Video Pane -->
+        <div class="video-pane" id="video-magnus">
+          <div class="video-tagline-wrapper">
+            <span class="video-tagline">Mantra Magnus | Premium Residences Walkthrough</span>
+          </div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/9181oyDKveM" title="Mantra Magnus - Mundhwa, Pune | Exclusive Project Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location Advantage Section -->
+  <section class="location-advantage-section" id="location-advantage">
+    <div class="location-advantage-container">
+      <h2 class="location-advantage-title">Location Advantage</h2>
+      <p class="location-advantage-subtitle">Prime connectivity and rapid accessibility to Pune's key landmarks</p>
+
+      <!-- Property Selector Tabs -->
+      <div class="location-property-tabs">
+        <button class="location-tab-btn active" data-target="location-melange">Mantra Melange (Kharadi)</button>
+        <button class="location-tab-btn" data-target="location-magnus">Mantra Magnus (Mundhwa)</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="location-tab-contents">
+        <!-- Melange Content Pane -->
+        <div class="location-pane active" id="location-melange">
+          <div class="location-visual-wrapper">
+            <img src="assets/melange_location_map.png" alt="Mantra Melange Location Map" loading="lazy">
+            <button class="location-visual-zoom" aria-label="Zoom Map">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="location-categories-container">
+            <!-- Travel/Connectivity -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+                <h4>Connectivity &amp; Travel</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Pune International Airport</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Pune Railway Station</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commercial/IT Hubs -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                  <line x1="9" y1="22" x2="9" y2="16"></line>
+                  <line x1="15" y1="22" x2="15" y2="16"></line>
+                  <line x1="9" y1="16" x2="15" y2="16"></line>
+                  <path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01M12 10h.01"></path>
+                </svg>
+                <h4>Commercial &amp; IT Hubs</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Magarpatta City</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">World Trade Center</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">7 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">EON IT Park</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Cerebrum IT Park</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Retail & Leisure -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <h4>Retail &amp; Leisure</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Seasons Mall</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Phoenix Market City</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">8 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">KOPA Mall</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">15 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hospitality -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 22h20M2 12h20M4 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8M10 16h4M10 20h4"></path>
+                </svg>
+                <h4>Premium Hospitality</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Radisson Blue Hotel</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Fairfield by Marriott</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">6 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Novotel Hotel</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">8 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">The Westin</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+                <h4>Elite Education</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">ORCHIDS The International School</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Bishops Co-Ed School</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">8 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Vibgyor High School</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Healthcare -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+                <h4>Healthcare &amp; Hospitals</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Columbia Asia Hospital</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Motherhood Hospital</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Medipoint Hospital</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">8 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Noble Hospital</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Magnus Content Pane -->
+        <div class="location-pane" id="location-magnus">
+          <div class="location-visual-wrapper">
+            <img src="assets/magnus_location_advantage.png" alt="Mantra Magnus Location Advantage" loading="lazy">
+            <button class="location-visual-zoom" aria-label="Zoom Map">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="location-categories-container">
+            <!-- Travel/Localities -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+                <h4>Connectivity &amp; Localities</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Hadapaser Railway Station</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Pune Solapur Road</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Pune Railway Station</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Pune International Airport</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Koregaon Park / Kalyani Nagar / Yerwada</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Viman Nagar / Kharadi IT Zone</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commercial/IT Hubs -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                  <line x1="9" y1="22" x2="9" y2="16"></line>
+                  <line x1="15" y1="22" x2="15" y2="16"></line>
+                  <line x1="9" y1="16" x2="15" y2="16"></line>
+                  <path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01M12 10h.01"></path>
+                </svg>
+                <h4>Commercial &amp; IT Hubs</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Magarpatta City</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">World Trade Centre</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Eon IT Park</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Cerebrum IT Park</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Weikfield IT Citi Info Park</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Business Bay</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Retail & Leisure -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <h4>Retail &amp; Leisure</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Seasons Mall</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Amanora Town Centre</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Meriplex Mall</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Phoenix Marketcity</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+                <h4>Elite Education</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">ORBIS School</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Vibgyor School</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Little Millennium</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">15 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Lexicon School / The Bishop's School</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">City International School</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Healthcare -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+                <h4>Healthcare &amp; Hospitals</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Columbia Hospital (Manipal)</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Noble Hospital</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">15 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Medipoint Hospital / Ruby Hall Clinic</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Inlaks &amp; Budhrani / Apollo Jehangir Hospital</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">20 Mins</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal for Location Images -->
+  <div id="locationLightbox" class="lightbox-modal" aria-hidden="true">
+    <button class="lightbox-close" id="closeLightbox" aria-label="Close image view">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="Location Map Full View">
+    </div>
+  </div>
+
+  <!-- About Developer Section -->
+  <section class="about-mantra-section" id="about-mantra">
+    <div class="about-mantra-overlay"></div>
+    <div class="about-mantra-container">
+      <div class="about-mantra-card">
+        <span class="about-mantra-tag">ABOUT</span>
+        <h2 class="about-mantra-title">MANTRA PROPERTIES</h2>
+        <p class="about-mantra-text">
+          We are Mantra Properties, a developer founded on and driven by our philosophy of premium innovation and unmatched design. After years of excellence, with over 15+ completed and ongoing residential and commercial landmark projects across Pune, and millions of square feet under development, we continue to expand our horizons. Together with our team of experienced design, engineering, and construction specialists, sales and marketing professionals, and resource managers, we collectively strive towards raising the standards of Real Estate in Pune – for our customers, partners, and employees.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Map Section -->
+  <section class="location-map-section" id="location-map">
+    <div class="location-map-header">
+      <h2 class="location-map-title">At the Nexus of Connectivity &amp; Convenience</h2>
+      
+      <!-- Map Selector Tabs -->
+      <div class="map-tabs">
+        <button class="map-tab-btn active" data-target="map-melange" data-link="https://maps.google.com/?q=Mantra+Melange+Kharadi+Pune">Mantra Melange (Kharadi)</button>
+        <button class="map-tab-btn" data-target="map-magnus" data-link="https://maps.google.com/?q=Mantra+Magnus+Mundhwa+Pune">Mantra Magnus (Mundhwa)</button>
+      </div>
+
+      <a href="https://maps.google.com/?q=Mantra+Melange+Kharadi+Pune" id="btn-map-link" target="_blank" rel="noopener noreferrer" class="btn-location-gold">CONNECTIVITY &amp; LOCATION</a>
+    </div>
+
+    <div class="map-tab-contents">
+      <!-- Melange Map Pane -->
+      <div class="map-pane active" id="map-melange">
+        <div class="location-map-wrapper">
+          <div class="location-map-pin">
+            <div class="pin-pulse"></div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60531.16!2d73.91!3d18.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c3261e528d%3A0x8d8e7a6b3e7b6b1a!2sKharadi%2C+Pune%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mantra Melange Location - Kharadi, Pune">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Magnus Map Pane -->
+      <div class="map-pane" id="map-magnus">
+        <div class="location-map-wrapper">
+          <div class="location-map-pin">
+            <div class="pin-pulse"></div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2721665427514!2d73.9172605!3d18.5278788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1ea9f583e7b%3A0x82db06eb18e695d7!2sMantra%20Magnus!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mantra Magnus Location - Mundhwa, Pune">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section (Overlapping Map) -->
+  <section class="contact-overlap-section" id="contact">
+    <div class="contact-overlap-container">
+      
+
+
+      <!-- Left: Image -->
+      <div class="contact-overlap-image">
+        <img src="assets/amenity_play.jpg" alt="Mantra Properties Kids Play Area">
+      </div>
+      <!-- Right: Form -->
+      <div class="contact-overlap-form">
+        <h2 class="contact-overlap-title">Your passage<br>into opulent living begins now</h2>
+        <form class="overlap-form" id="overlapEnquiryForm">
+          <div class="overlap-form-row">
+            <input type="text" placeholder="Name*" required />
+            <input type="email" placeholder="Email*" required />
+          </div>
+          <input type="tel" placeholder="Mobile no.*" required />
+          <select required>
+            <option value="" disabled selected>Select Property*</option>
+            <option value="melange">Mantra Melange – Kharadi</option>
+            <option value="magnus">Mantra Magnus – Mundhwa</option>
+            <option value="marvilla">Mantra Marvilla – Luxury Villa</option>
+          </select>
+          <textarea rows="3" placeholder="Message"></textarea>
+          <button type="submit" class="btn-overlap-submit">
+            <span>Enquiry Now</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/></svg>
+          </button>
+        </form>
+        <div class="contact-overlap-address">
+          <span class="address-label">OUR DETAIL</span>
+          <p>Mantra Melange, Kharadi–Mundhwa Bypass, Kharadi, Pune, Maharashtra – 411014</p>
+        </div>
+      </div>
+     </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo footer-logo">
+            <div class="logo-wrapper">
+              <svg class="logo-icon" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15,30 Q25,10 45,5 Q32,20 20,32 Z" fill="#ffffff" />
+                <path d="M22,30 Q34,12 55,8 Q41,22 28,32 Z" fill="#ffffff" opacity="0.8" />
+                <path d="M29,30 Q43,15 65,11 Q50,24 36,32 Z" fill="#ffffff" opacity="0.6" />
+              </svg>
+              <span class="logo-text">mantra</span>
+            </div>
+          </a>
+          <p class="brand-tagline">Providing quality luxury developments across Pune with unmatched architectural integrity and absolute commitment to deadlines.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>OUR PROJECTS</h4>
+          <ul>
+            <li><a href="#melange">Mantra Melange (Kharadi)</a></li>
+            <li><a href="#magnus">Mantra Magnus (Mundhwa)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-rera">
+          <h4>MAHARERA REGISTRATION</h4>
+          <div class="rera-content-wrapper">
+            <!-- Mantra Melange RERA -->
+            <div class="rera-item">
+              <img src="assets/melange_rera_qr.png" alt="Mantra Melange MahaRERA QR Code" class="footer-rera-qr" loading="lazy">
+              <div class="rera-number-box">
+                <span class="rera-label">Mantra Melange RERA:</span>
+                <strong class="rera-no">P52100079582</strong>
+              </div>
+            </div>
+            <!-- Mantra Magnus RERA -->
+            <div class="rera-item">
+              <img src="assets/magnus_rera_qr.png" alt="Mantra Magnus MahaRERA QR Code" class="footer-rera-qr" loading="lazy">
+              <div class="rera-number-box">
+                <span class="rera-label">Mantra Magnus RERA:</span>
+                <strong class="rera-no">P52100078851</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mantra Properties. All Rights Reserved. Designed for representation purposes.</p>
+        <div class="footer-bottom-links">
+          <a href="#terms">Terms &amp; Conditions</a>
+          <span class="separator">|</span>
+          <a href="#privacy">Privacy Policy</a>
+        </div>
+        <p class="rera-disclaimer">Disclaimer: All projects listed are registered under MahaRERA. Registration Numbers: Mantra Melange - P52100079582, Mantra Magnus - P52100078851. For official verification, visit <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener">MahaRERA Website</a>.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919168890222?text=Hello%2C%20I%20am%20interested%20in%20Mantra%20Melange.%20Please%20share%20more%20details." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat on WhatsApp">
+    <div class="whatsapp-icon-wrapper">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 0C7.163 0 0 7.163 0 16c0 2.833.738 5.49 2.027 7.8L0 32l8.424-2.01A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z" fill="#25D366"/>
+        <path d="M23.5 19.914c-.313-.156-1.854-.914-2.141-1.018-.287-.104-.496-.156-.705.156-.208.313-.808 1.018-.99 1.227-.183.208-.365.234-.678.078-.313-.156-1.321-.487-2.517-1.553-.93-.83-1.558-1.854-1.74-2.167-.183-.313-.02-.482.137-.637.141-.14.313-.365.469-.547.156-.183.208-.313.313-.521.104-.208.052-.39-.026-.547-.078-.156-.705-1.7-.966-2.327-.254-.612-.513-.529-.705-.539-.183-.009-.39-.011-.599-.011-.208 0-.547.078-.834.39-.287.313-1.094 1.069-1.094 2.607 0 1.538 1.12 3.024 1.276 3.232.156.208 2.206 3.369 5.344 4.724.747.322 1.329.515 1.784.659.749.238 1.431.204 1.97.124.601-.089 1.854-.757 2.115-1.489.261-.731.261-1.357.183-1.489-.078-.13-.287-.208-.6-.365z" fill="#fff"/>
+      </svg>
+    </div>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+
+  <!-- ===== Enquiry Popup Modal ===== -->
+  <div class="enquiry-modal-overlay" id="enquiryModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="enquiry-modal-box">
+      <!-- Close Button -->
+      <button class="enquiry-modal-close" id="btnEnquiryModalClose" aria-label="Close">&times;</button>
+
+      <!-- Left Accent Panel -->
+      <div class="enquiry-modal-accent">
+        <div class="enquiry-accent-content">
+          <span class="enquiry-accent-tag">MANTRA MELANGE</span>
+          <h2 class="enquiry-accent-title">Begin Your<br>Luxury Journey</h2>
+          <p class="enquiry-accent-desc">2 &amp; 3 BHK Residences at Kharadi Riverside, Pune</p>
+          <div class="enquiry-accent-highlights">
+            <div class="enquiry-highlight-item">
+              <span class="highlight-dot"></span>
+              <span>Smart Home Automation</span>
+            </div>
+            <div class="enquiry-highlight-item">
+              <span class="highlight-dot"></span>
+              <span>Riverside Location</span>
+            </div>
+            <div class="enquiry-highlight-item">
+              <span class="highlight-dot"></span>
+              <span>MahaRERA Registered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form Panel -->
+      <div class="enquiry-modal-form-panel">
+        <h3 class="enquiry-form-title">Enquire Now</h3>
+        <p class="enquiry-form-subtitle">Our team will reach out within 24 hours</p>
+
+        <!-- Form -->
+        <form class="enquiry-popup-form" id="enquiryPopupForm" novalidate>
+          <div class="epf-row">
+            <div class="epf-field">
+              <input type="text" id="epfName" placeholder="Full Name *" required autocomplete="name">
+            </div>
+            <div class="epf-field">
+              <input type="tel" id="epfPhone" placeholder="Phone Number *" required autocomplete="tel">
+            </div>
+          </div>
+          <div class="epf-field">
+            <input type="email" id="epfEmail" placeholder="Email Address *" required autocomplete="email">
+          </div>
+          <div class="epf-field">
+            <select id="epfProject">
+              <option value="" disabled selected>Interested In</option>
+              <option value="melange-2bhk">2 BHK – Mantra Melange</option>
+              <option value="melange-3bhk">3 BHK – Mantra Melange</option>
+              <option value="magnus-3bhk">3 BHK – Mantra Magnus</option>
+              <option value="magnus-3.5bhk">3.5 BHK Ultima – Mantra Magnus</option>
+              <option value="magnus-4.5bhk">4.5 BHK Ultima – Mantra Magnus</option>
+              <option value="magnus-garden">Magnus Garden Flats</option>
+              <option value="marvilla">Mantra Marvilla (5 BHK Villa)</option>
+            </select>
+          </div>
+          <div class="epf-field">
+            <textarea id="epfMessage" rows="3" placeholder="Your Message (Optional)"></textarea>
+          </div>
+          <button type="submit" class="btn-epf-submit" id="btnEpfSubmit">
+            <span>Send Enquiry</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </form>
+
+        <!-- Success State -->
+        <div class="epf-success" id="epfSuccess" style="display:none;">
+          <div class="epf-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h4>Thank You!</h4>
+          <p>We've received your enquiry. Our team will contact you shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
