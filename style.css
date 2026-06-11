@@ -1873,7 +1873,14 @@ section {
 /* --- About Mantra Properties Section --- */
 .about-mantra-section {
   position: relative;
-  background-image: url('assets/pune_city_skyline.webp');
+  background-image: url('assets/pune_city_skyline_mobile.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .about-mantra-section {
+    background-image: url('assets/pune_city_skyline.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5110,5 +5117,23 @@ section {
 @media (max-width: 480px) {
   .marvilla-specs-grid {
     grid-template-columns: 1fr;
+  }
+}
+/* --- Responsive Hero & Background Images for Performance --- */
+.hero-bg-melange {
+  background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.35)), url('assets/mantra_melange_mobile.webp');
+}
+@media (min-width: 768px) {
+  .hero-bg-melange {
+    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.35)), url('assets/mantra_melange.webp');
+  }
+}
+
+.hero-bg-aerial {
+  background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial Cam_mobile.webp');
+}
+@media (min-width: 768px) {
+  .hero-bg-aerial {
+    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial Cam.webp');
   }
 }
