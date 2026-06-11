@@ -5130,10 +5130,10 @@ section {
 }
 
 .hero-bg-aerial {
-  background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial Cam_mobile.webp');
+  background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial_Cam_mobile.webp');
 }
 @media (min-width: 768px) {
   .hero-bg-aerial {
-    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial Cam.webp');
+    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial_Cam.webp');
   }
 }
