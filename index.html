@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/mantra_melange.jpg" fetchpriority="high">
   <link rel="preload" as="image" href="assets/Aerial Cam.jpg" fetchpriority="high">
+  <meta name="description" content="Explore Mantra Properties' premium residential projects in Pune: Mantra Melange (Kharadi) and Mantra Magnus (Mundhwa). Discover smart luxury homes with modern amenities.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -112,7 +113,7 @@
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
       <span class="drawer-title">MENU</span>
-      <button class="drawer-close" id="drawerClose">&times;</button>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
     </div>
     <ul class="drawer-list">
       <li><a href="#about" class="drawer-link">ABOUT US</a></li>
@@ -216,8 +217,8 @@
 
     <!-- Slide dots -->
     <div class="hero-dots" id="heroDots">
-      <span class="hero-dot active" data-index="0"></span>
-      <span class="hero-dot" data-index="1"></span>
+      <span class="hero-dot active" data-index="0" role="button" aria-label="Go to slide 1"></span>
+      <span class="hero-dot" data-index="1" role="button" aria-label="Go to slide 2"></span>
     </div>
 
 
@@ -1119,7 +1120,7 @@
             <span class="video-tagline">Mantra Melange | Exclusive Show Apartment Walkthrough</span>
           </div>
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/ZoUf1_Vvj4o" title="Mantra Melange - Kharadi Riverside | Project Tour of Pune's Next Landmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/ZoUf1_Vvj4o" title="Mantra Melange - Kharadi Riverside | Project Tour of Pune's Next Landmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
 
@@ -1129,7 +1130,7 @@
             <span class="video-tagline">Mantra Magnus | Premium Residences Walkthrough</span>
           </div>
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/9181oyDKveM" title="Mantra Magnus - Mundhwa, Pune | Exclusive Project Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/9181oyDKveM" title="Mantra Magnus - Mundhwa, Pune | Exclusive Project Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -1154,7 +1155,7 @@
         <!-- Melange Content Pane -->
         <div class="location-pane active" id="location-melange">
           <div class="location-visual-wrapper">
-            <img src="assets/melange_location_map.png" alt="Mantra Melange Location Map" loading="lazy">
+            <img src="assets/melange_location_map.png" alt="Mantra Melange Location Map" loading="lazy" decoding="async" width="600" height="450">
             <button class="location-visual-zoom" aria-label="Zoom Map">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8"></circle>
@@ -1349,7 +1350,7 @@
         <!-- Magnus Content Pane -->
         <div class="location-pane" id="location-magnus">
           <div class="location-visual-wrapper">
-            <img src="assets/magnus_location_advantage.png" alt="Mantra Magnus Location Advantage" loading="lazy">
+            <img src="assets/magnus_location_advantage.png" alt="Mantra Magnus Location Advantage" loading="lazy" decoding="async" width="600" height="450">
             <button class="location-visual-zoom" aria-label="Zoom Map">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8"></circle>
@@ -1649,17 +1650,17 @@
         <h2 class="contact-overlap-title">Your passage<br>into opulent living begins now</h2>
         <form class="overlap-form" id="overlapEnquiryForm">
           <div class="overlap-form-row">
-            <input type="text" placeholder="Name*" required />
-            <input type="email" placeholder="Email*" required />
+            <input type="text" placeholder="Name*" aria-label="Full Name" required />
+            <input type="email" placeholder="Email*" aria-label="Email Address" required />
           </div>
-          <input type="tel" placeholder="Mobile no.*" required />
-          <select required>
+          <input type="tel" placeholder="Mobile no.*" aria-label="Mobile Number" required />
+          <select aria-label="Select Property" required>
             <option value="" disabled selected>Select Property*</option>
             <option value="melange">Mantra Melange – Kharadi</option>
             <option value="magnus">Mantra Magnus – Mundhwa</option>
             <option value="marvilla">Mantra Marvilla – Luxury Villa</option>
           </select>
-          <textarea rows="3" placeholder="Message"></textarea>
+          <textarea rows="3" placeholder="Message" aria-label="Message"></textarea>
           <button type="submit" class="btn-overlap-submit">
             <span>Enquiry Now</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"/></svg>
@@ -1711,7 +1712,7 @@
           <div class="rera-content-wrapper">
             <!-- Mantra Melange RERA -->
             <div class="rera-item">
-              <img src="assets/melange_rera_qr.png" alt="Mantra Melange MahaRERA QR Code" class="footer-rera-qr" loading="lazy">
+              <img src="assets/melange_rera_qr.png" alt="Mantra Melange MahaRERA QR Code" class="footer-rera-qr" loading="lazy" decoding="async" width="110" height="110">
               <div class="rera-number-box">
                 <span class="rera-label">Mantra Melange RERA:</span>
                 <strong class="rera-no">P52100079582</strong>
@@ -1719,7 +1720,7 @@
             </div>
             <!-- Mantra Magnus RERA -->
             <div class="rera-item">
-              <img src="assets/magnus_rera_qr.png" alt="Mantra Magnus MahaRERA QR Code" class="footer-rera-qr" loading="lazy">
+              <img src="assets/magnus_rera_qr.png" alt="Mantra Magnus MahaRERA QR Code" class="footer-rera-qr" loading="lazy" decoding="async" width="110" height="110">
               <div class="rera-number-box">
                 <span class="rera-label">Mantra Magnus RERA:</span>
                 <strong class="rera-no">P52100078851</strong>
@@ -1736,7 +1737,7 @@
           <span class="separator">|</span>
           <a href="#privacy">Privacy Policy</a>
         </div>
-        <p class="rera-disclaimer">Disclaimer: All projects listed are registered under MahaRERA. Registration Numbers: Mantra Melange - P52100079582, Mantra Magnus - P52100078851. For official verification, visit <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener">MahaRERA Website</a>.</p>
+        <p class="rera-disclaimer">Disclaimer: All projects listed are registered under MahaRERA. Registration Numbers: Mantra Melange - P52100079582, Mantra Magnus - P52100078851. For official verification, visit <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">MahaRERA Website</a>.</p>
       </div>
     </div>
   </footer>
@@ -1794,17 +1795,17 @@
         <form class="enquiry-popup-form" id="enquiryPopupForm" novalidate>
           <div class="epf-row">
             <div class="epf-field">
-              <input type="text" id="epfName" placeholder="Full Name *" required autocomplete="name">
+              <input type="text" id="epfName" placeholder="Full Name *" aria-label="Full Name" required autocomplete="name">
             </div>
             <div class="epf-field">
-              <input type="tel" id="epfPhone" placeholder="Phone Number *" required autocomplete="tel">
+              <input type="tel" id="epfPhone" placeholder="Phone Number *" aria-label="Phone Number" required autocomplete="tel">
             </div>
           </div>
           <div class="epf-field">
-            <input type="email" id="epfEmail" placeholder="Email Address *" required autocomplete="email">
+            <input type="email" id="epfEmail" placeholder="Email Address *" aria-label="Email Address" required autocomplete="email">
           </div>
           <div class="epf-field">
-            <select id="epfProject">
+            <select id="epfProject" aria-label="Select Project">
               <option value="" disabled selected>Interested In</option>
               <option value="melange-2bhk">2 BHK – Mantra Melange</option>
               <option value="melange-3bhk">3 BHK – Mantra Melange</option>
@@ -1816,7 +1817,7 @@
             </select>
           </div>
           <div class="epf-field">
-            <textarea id="epfMessage" rows="3" placeholder="Your Message (Optional)"></textarea>
+            <textarea id="epfMessage" rows="3" placeholder="Your Message (Optional)" aria-label="Your Message"></textarea>
           </div>
           <button type="submit" class="btn-epf-submit" id="btnEpfSubmit">
             <span>Send Enquiry</span>
