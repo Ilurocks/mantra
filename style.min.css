@@ -4,7 +4,7 @@
   --bg-primary: #121315;
   --bg-secondary: #1a1c1f;
   --bg-darker: #0c0d0f;
-  --nav-bg: #4b4d4f;
+  --nav-bg: rgba(18, 19, 21, 0.9);
 
   --accent-gold: #c5a880;
   --accent-gold-hover: #d7be9b;
@@ -117,6 +117,8 @@ button {
   display: flex;
   align-items: center;
   transition: var(--transition-smooth);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 /* Scroll header effect */
@@ -1048,8 +1050,8 @@ section {
 
 /* --- About / Melange Lifestyle Section --- */
 .about {
-  background-color: #ffffff;
-  /* Clean white background */
+  background-color: var(--bg-primary);
+  /* Dark luxury background */
   position: relative;
   overflow: hidden;
   padding: 110px 0;
@@ -1102,12 +1104,16 @@ section {
   height: 100%;
 }
 
+.about-watermark svg path {
+  stroke: rgba(255, 255, 255, 0.02) !important;
+}
+
 .section-tag-dark {
   font-family: var(--font-sans);
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
-  color: #8a8d94;
+  color: var(--accent-gold);
   text-transform: uppercase;
   margin-bottom: 8px;
   display: block;
@@ -1119,7 +1125,7 @@ section {
   font-weight: 400;
   /* Regular serif weight exactly matching image */
   line-height: 1.25;
-  color: #1a1b1e;
+  color: var(--text-white);
   margin-bottom: 25px;
   letter-spacing: -0.2px;
 }
@@ -1128,7 +1134,7 @@ section {
   font-family: var(--font-sans);
   font-size: 11.5px;
   /* Tiny, elegant description text size */
-  color: #62656b;
+  color: var(--text-muted);
   margin-bottom: 15px;
   line-height: 1.65;
   max-width: 480px;
@@ -1155,8 +1161,8 @@ section {
   border-radius: 40px;
   /* Very high rounded organic corners curves */
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--border-gold);
 }
 
 .lifestyle-img {
@@ -1415,13 +1421,13 @@ section {
 
 /* --- Video Showcase Section --- */
 .video-showcase {
-  background-color: #f3eee8;
-  /* Premium light cream background matching screenshot */
+  background-color: var(--bg-secondary);
+  /* Premium dark theme background */
   padding: 40px 0 120px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .video-container {
@@ -1434,7 +1440,7 @@ section {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 3.8vw, 2.5rem);
   font-weight: 400;
-  color: #1a1b1e;
+  color: var(--text-white);
   margin-bottom: 15px;
   letter-spacing: -0.2px;
 }
@@ -1453,7 +1459,7 @@ section {
   left: 10%;
   width: 80%;
   height: 1.5px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .video-tagline {
@@ -1461,7 +1467,7 @@ section {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1.5px;
-  color: #72757c;
+  color: var(--accent-gold);
   text-transform: uppercase;
 }
 
@@ -1472,7 +1478,7 @@ section {
   aspect-ratio: 16 / 9;
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
   background-color: #000;
   opacity: 0;
   transform: translateY(50px) scale(0.95);
@@ -1507,23 +1513,23 @@ section {
   text-transform: uppercase;
   padding: 12px 32px;
   background-color: transparent;
-  color: #72757c;
-  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  color: var(--text-muted);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .video-tab-btn:hover {
-  color: #1a1b1e;
-  border-color: #1a1b1e;
+  color: var(--text-white);
+  border-color: var(--accent-gold);
 }
 
 .video-tab-btn.active {
-  background-color: #1a1b1e;
-  color: #ffffff;
-  border-color: #1a1b1e;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: var(--accent-gold);
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.2);
 }
 
 /* Video Panes */
@@ -3534,8 +3540,8 @@ section {
    PROJECT HIGHLIGHTS SECTION
    ============================================ */
   .highlights-section {
-    background-color: #f7f6f2;
-    /* Light cream background to contrast dark sections */
+    background-color: var(--bg-secondary);
+    /* Dark background */
     padding: 100px 40px;
     position: relative;
     overflow: hidden;
@@ -3565,7 +3571,7 @@ section {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #a07c30;
+    color: var(--accent-gold);
     text-transform: uppercase;
     margin-bottom: 15px;
   }
@@ -3574,14 +3580,14 @@ section {
     font-family: var(--font-serif);
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 600;
-    color: #1a1b1e;
+    color: var(--text-white);
     margin-bottom: 15px;
   }
 
   .highlights-subtitle {
     font-family: var(--font-sans);
     font-size: 14px;
-    color: #5a5c61;
+    color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -3593,7 +3599,7 @@ section {
     justify-content: center;
     gap: 20px;
     margin-bottom: 50px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--border-light);
     padding-bottom: 15px;
   }
 
@@ -3601,7 +3607,7 @@ section {
     font-family: var(--font-sans);
     font-size: 14px;
     font-weight: 600;
-    color: #8a8c91;
+    color: var(--text-muted);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -3611,11 +3617,11 @@ section {
   }
 
   .highlight-tab-btn:hover {
-    color: #1a1b1e;
+    color: var(--text-white);
   }
 
   .highlight-tab-btn.active {
-    color: #a07c30;
+    color: var(--accent-gold);
   }
 
   .highlight-tab-btn::after {
@@ -3625,7 +3631,7 @@ section {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #a07c30;
+    background-color: var(--accent-gold);
     transition: width 0.3s ease;
   }
 
@@ -3650,26 +3656,26 @@ section {
   }
 
   .highlight-card {
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
 
   .highlight-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(160, 124, 48, 0.08);
-    border-color: rgba(160, 124, 48, 0.2);
+    box-shadow: 0 15px 35px rgba(197, 168, 128, 0.15);
+    border-color: var(--accent-gold);
   }
 
   .highlight-card-icon {
     width: 50px;
     height: 50px;
     border-radius: 10px;
-    background-color: rgba(160, 124, 48, 0.08);
-    color: #a07c30;
+    background-color: rgba(197, 168, 128, 0.1);
+    color: var(--accent-gold);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3685,14 +3691,14 @@ section {
     font-family: var(--font-serif);
     font-size: 18px;
     font-weight: 600;
-    color: #1a1b1e;
+    color: var(--text-white);
     margin-bottom: 12px;
   }
 
   .highlight-card-text {
     font-family: var(--font-sans);
     font-size: 13px;
-    color: #5a5c61;
+    color: var(--text-muted);
     line-height: 1.6;
   }
 
@@ -3716,7 +3722,8 @@ section {
    ELEVATIONS & MASTER PLANS SECTION
    ============================================ */
   .plans-section {
-    background-color: #ffffff;
+    background-color: var(--bg-primary);
+    /* Dark background */
     padding: 100px 40px;
     position: relative;
     overflow: hidden;
@@ -3746,7 +3753,7 @@ section {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #a07c30;
+    color: var(--accent-gold);
     text-transform: uppercase;
     margin-bottom: 15px;
   }
@@ -3755,20 +3762,20 @@ section {
     font-family: var(--font-serif);
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 600;
-    color: #1a1b1e;
+    color: var(--text-white);
     margin-bottom: 15px;
   }
 
   .plans-subtitle {
     font-family: var(--font-sans);
     font-size: 14px;
-    color: #5a5c61;
+    color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
   }
 
-  /* Level 1 Tabs (Avive Towers / Gera button styles) */
+  /* Level 1 Tabs */
   .plans-level1-tabs {
     display: flex;
     justify-content: center;
@@ -3784,24 +3791,26 @@ section {
     text-transform: uppercase;
     padding: 12px 28px;
     background-color: transparent;
-    color: #1a1c1f;
-    border: 1.5px solid #1a1c1f;
+    color: var(--text-muted);
+    border: 1.5px solid var(--border-light);
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
   .level1-tab-btn:hover {
-    background-color: rgba(26, 28, 31, 0.05);
+    color: var(--text-white);
+    border-color: var(--accent-gold);
   }
 
   .level1-tab-btn.active {
-    background-color: #1a1c1f;
-    color: #ffffff;
-    border-color: #1a1c1f;
+    background-color: var(--accent-gold);
+    color: var(--bg-primary);
+    border-color: var(--accent-gold);
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.25);
   }
 
-  /* Level 2 Tabs (Elevation / Master Plan button styles) */
+  /* Level 2 Tabs */
   .plans-level2-tabs {
     display: flex;
     justify-content: center;
@@ -3815,21 +3824,21 @@ section {
     font-weight: 600;
     padding: 10px 24px;
     background-color: transparent;
-    color: #a07c30;
-    border: 1.5px solid #a07c30;
+    color: var(--accent-gold);
+    border: 1.5px solid var(--accent-gold);
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
   .level2-tab-btn:hover {
-    background-color: rgba(160, 124, 48, 0.06);
+    background-color: rgba(197, 168, 128, 0.08);
   }
 
   .level2-tab-btn.active {
-    background-color: #a07c30;
-    color: #ffffff;
-    border-color: #a07c30;
+    background-color: var(--accent-gold);
+    color: var(--bg-primary);
+    border-color: var(--accent-gold);
   }
 
   /* Content Pane logic display */
@@ -3851,8 +3860,8 @@ section {
   }
 
   .plan-display-card {
-    background-color: #fcfbf9;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-light);
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
@@ -3865,11 +3874,12 @@ section {
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 24px;
-    background-color: #e0ddd8;
+    background-color: var(--bg-primary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35);
   }
 
   .plan-img-wrapper img {
@@ -3888,14 +3898,14 @@ section {
     font-family: var(--font-serif);
     font-size: 20px;
     font-weight: 600;
-    color: #1a1b1e;
+    color: var(--text-white);
     margin-bottom: 10px;
   }
 
   .plan-detail-desc {
     font-family: var(--font-sans);
     font-size: 14px;
-    color: #5a5c61;
+    color: var(--text-muted);
     line-height: 1.6;
   }
 
@@ -4299,14 +4309,14 @@ section {
     font-family: var(--font-sans);
     font-size: 13.5px;
     font-weight: 700;
-    color: #1a1b1e;
+    color: var(--text-white);
     margin-bottom: 4px;
   }
   
   .elevation-item-caption p {
     font-family: var(--font-sans);
     font-size: 11px;
-    color: #7a7c81;
+    color: var(--text-muted);
     line-height: 1.4;
   }
 
