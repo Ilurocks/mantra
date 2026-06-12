@@ -2673,7 +2673,7 @@ section {
       border-bottom: none;
       padding-bottom: 0;
       align-items: center;
-      width: 100%;
+      width: auto;
     }
 
     .project-details {
@@ -5414,5 +5414,19 @@ section {
     padding: 6px 12px;
     flex: 0 1 auto;
     border-radius: 15px;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-tab-btn {
+    font-size: 8px;
+    padding: 5px 10px;
+  }
+  .brand-main {
+    font-size: 20px;
   }
 }
