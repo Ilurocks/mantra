@@ -13,7 +13,7 @@
   <link rel="preload" as="image" href="assets/mantra_melange.webp" media="(min-width: 768px)" fetchpriority="high">
   
   <meta name="description" content="Explore Mantra Properties' premium residential projects in Pune: Mantra Melange (Kharadi) and Mantra Magnus (Mundhwa). Discover smart luxury homes with modern amenities.">
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -1839,6 +1839,38 @@
     </div>
   </div>
 
-  <script src="script.min.js"></script>
+  <!-- ===== Thank You Popup Modal ===== -->
+  <div class="thankyou-modal-overlay" id="thankYouModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="thankyou-modal-box">
+      <!-- Close Button -->
+      <button class="thankyou-modal-close" id="btnThankYouModalClose" aria-label="Close">&times;</button>
+      
+      <!-- Inner Content -->
+      <div class="thankyou-content">
+        <!-- Animated Checkmark Icon -->
+        <div class="thankyou-icon-wrapper">
+          <svg class="checkmark-svg" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+          </svg>
+        </div>
+        
+        <h2 class="thankyou-title">Thank You!</h2>
+        <p class="thankyou-subtitle">Your Enquiry has been Received Successfully</p>
+        
+        <div class="thankyou-divider"></div>
+        
+        <p class="thankyou-message">
+          Thank you for your interest in Mantra Properties. An elite housing relationship advisor will contact you within the next 24 hours to share the project walkthrough, unit plans, and exclusive pricing details.
+        </p>
+        
+        <button class="btn-thankyou-close" id="btnThankYouClose">
+          <span>Continue</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

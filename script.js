@@ -517,13 +517,121 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         return;
       }
-      // Show success
-      enquiryForm.style.display = 'none';
-      epfSuccess.style.display = 'flex';
-      // Auto close after 2.5s
-      setTimeout(closeEnquiryModal, 2500);
+      
+      // Close Enquiry Modal and open Thank You Modal
+      closeEnquiryModal();
+      setTimeout(openThankYouModal, 350);
     });
   }
+
+  /* ==========================================
+     THANK YOU POPUP MODAL
+     ========================================== */
+  const thankYouModal = document.getElementById('thankYouModal');
+  const btnThankYouModalClose = document.getElementById('btnThankYouModalClose');
+  const btnThankYouClose = document.getElementById('btnThankYouClose');
+
+  function openThankYouModal() {
+    if (thankYouModal) {
+      thankYouModal.classList.add('active');
+      thankYouModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      
+      // Reset animations for checkmark SVG
+      const checkmarkSvg = thankYouModal.querySelector('.checkmark-svg');
+      if (checkmarkSvg) {
+        checkmarkSvg.style.animation = 'none';
+        checkmarkSvg.offsetHeight; /* trigger reflow */
+        checkmarkSvg.style.animation = '';
+      }
+      const checkmarkCircle = thankYouModal.querySelector('.checkmark-circle');
+      if (checkmarkCircle) {
+        checkmarkCircle.style.animation = 'none';
+        checkmarkCircle.offsetHeight;
+        checkmarkCircle.style.animation = '';
+      }
+      const checkmarkCheck = thankYouModal.querySelector('.checkmark-check');
+      if (checkmarkCheck) {
+        checkmarkCheck.style.animation = 'none';
+        checkmarkCheck.offsetHeight;
+        checkmarkCheck.style.animation = '';
+      }
+    }
+  }
+
+  function closeThankYouModal() {
+    if (thankYouModal) {
+      thankYouModal.classList.remove('active');
+      thankYouModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (btnThankYouModalClose) {
+    btnThankYouModalClose.addEventListener('click', closeThankYouModal);
+  }
+  if (btnThankYouClose) {
+    btnThankYouClose.addEventListener('click', closeThankYouModal);
+  }
+
+  // Close on backdrop click
+  if (thankYouModal) {
+    thankYouModal.addEventListener('click', (e) => {
+      if (e.target === thankYouModal) closeThankYouModal();
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && thankYouModal && thankYouModal.classList.contains('active')) {
+      closeThankYouModal();
+    }
+  });
+
+  /* ==========================================
+     INLINE CONTACT FORM SUBMISSION
+     ========================================== */
+  const overlapEnquiryForm = document.getElementById('overlapEnquiryForm');
+  if (overlapEnquiryForm) {
+    overlapEnquiryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const inputs = overlapEnquiryForm.querySelectorAll('input[required], select[required]');
+      let isValid = true;
+
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          isValid = false;
+          input.style.borderColor = '#e05252';
+          input.addEventListener('input', () => { input.style.borderColor = ''; }, { once: true });
+        }
+      });
+
+      if (!isValid) return;
+
+      const name = overlapEnquiryForm.querySelector('input[type="text"]')?.value.trim();
+      const email = overlapEnquiryForm.querySelector('input[type="email"]')?.value.trim();
+      const phone = overlapEnquiryForm.querySelector('input[type="tel"]')?.value.trim();
+      const property = overlapEnquiryForm.querySelector('select')?.value;
+      const message = overlapEnquiryForm.querySelector('textarea')?.value.trim();
+
+      console.log('--- OVERLAP CONTACT FORM SUBMITTED ---');
+      console.log(`Name: ${name}`);
+      console.log(`Email: ${email}`);
+      console.log(`Phone: ${phone}`);
+      console.log(`Property: ${property}`);
+      console.log(`Message: ${message}`);
+      console.log('-------------------------------------');
+
+      // Clear the form
+      overlapEnquiryForm.reset();
+
+      // Show Thank You modal
+      openThankYouModal();
+    });
+  }
+
 
   /* ==========================================
      15. Project Highlights Tab System

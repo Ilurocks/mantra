@@ -5141,3 +5141,222 @@ section {
     background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial_Cam.webp');
   }
 }
+
+/* ============================================
+   THANK YOU POPUP MODAL STYLING
+   ============================================ */
+.thankyou-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10005; /* higher than enquiry-modal-overlay */
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.4s;
+}
+
+.thankyou-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.thankyou-modal-box {
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #161719 0%, #1e2023 100%);
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transform: scale(0.9) translateY(30px);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow: hidden;
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.thankyou-modal-overlay.active .thankyou-modal-box {
+  transform: scale(1) translateY(0);
+}
+
+.thankyou-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.thankyou-modal-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* Checkmark Animation */
+.thankyou-icon-wrapper {
+  margin: 0 auto 24px auto;
+  width: 80px;
+  height: 80px;
+}
+
+.checkmark-svg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2.5;
+  stroke: var(--accent-gold);
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px var(--accent-gold);
+  animation: fillCheckmark .4s ease-in-out .4s forwards, scaleCheckmark .3s ease-in-out .9s forwards;
+}
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2.5;
+  stroke: rgba(197, 168, 128, 0.2);
+  fill: none;
+  animation: strokeCircle .6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: strokeCheckmark .4s cubic-bezier(0.25, 1, 0.5, 1) .6s forwards;
+}
+
+@keyframes strokeCircle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes strokeCheckmark {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillCheckmark {
+  100% {
+    box-shadow: inset 0px 0px 0px 40px rgba(197, 168, 128, 0.1);
+  }
+}
+
+@keyframes scaleCheckmark {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+/* Content Text */
+.thankyou-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--accent-gold-hover);
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.thankyou-subtitle {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  opacity: 0.95;
+  margin-bottom: 20px;
+}
+
+.thankyou-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  margin: 0 auto 24px auto;
+}
+
+.thankyou-message {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-thankyou-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #c49e4c 0%, #a07c30 100%);
+  color: #1a1208;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(196, 158, 76, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-thankyou-close:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(196, 158, 76, 0.4);
+}
+
+.btn-thankyou-close:active {
+  transform: translateY(0);
+}
+
+/* Responsiveness */
+@media (max-width: 576px) {
+  .thankyou-modal-box {
+    padding: 40px 24px;
+    border-radius: 20px;
+  }
+  .thankyou-title {
+    font-size: 1.8rem;
+  }
+  .thankyou-subtitle {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+  .thankyou-message {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
