@@ -5360,3 +5360,59 @@ section {
     line-height: 1.6;
   }
 }
+
+/* ============================================
+   HERO SLIDER PROPERTY TABS
+   ============================================ */
+.brand-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-tab-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  white-space: nowrap;
+}
+
+.hero-tab-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--text-white);
+}
+
+.hero-tab-btn.active {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 12px rgba(197, 168, 128, 0.25);
+}
+
+/* Mobile responsive layout for brand tabs */
+@media (max-width: 991px) {
+  .brand-tabs-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .hero-tab-btn {
+    font-size: 9px;
+    padding: 6px 12px;
+    flex: 0 1 auto;
+    border-radius: 15px;
+  }
+}

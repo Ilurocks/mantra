@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroBrochureBtn = document.getElementById('heroBrochureBtn');
   const heroEnquireBtn = document.getElementById('heroEnquireBtn');
   const heroDots = document.querySelectorAll('.hero-dot');
+  const heroTabBtns = document.querySelectorAll('.hero-tab-btn');
 
   function updateHeroPanel(slide) {
     const d = slide.dataset;
@@ -60,16 +61,49 @@ document.addEventListener('DOMContentLoaded', () => {
     function goToSlide(idx) {
       heroBgs[currentSlide].classList.remove('active');
       heroDots[currentSlide] && heroDots[currentSlide].classList.remove('active');
+      heroTabBtns[currentSlide] && heroTabBtns[currentSlide].classList.remove('active');
+      
       currentSlide = (idx + heroBgs.length) % heroBgs.length;
+      
       heroBgs[currentSlide].classList.add('active');
       heroDots[currentSlide] && heroDots[currentSlide].classList.add('active');
+      heroTabBtns[currentSlide] && heroTabBtns[currentSlide].classList.add('active');
+      
       updateHeroPanel(heroBgs[currentSlide]);
     }
 
-    setInterval(() => goToSlide(currentSlide + 1), 5500);
+    // Auto slide
+    let autoSlideInterval = setInterval(() => goToSlide(currentSlide + 1), 2000);
+
+    // Reset interval helper on manual click so it doesn't slide immediately after click
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(() => goToSlide(currentSlide + 1), 2000);
+    }
 
     heroDots.forEach(dot => {
-      dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index)));
+      dot.addEventListener('click', () => {
+        goToSlide(parseInt(dot.dataset.index));
+        resetAutoSlide();
+      });
+    });
+
+    heroTabBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const index = parseInt(btn.dataset.index);
+        goToSlide(index);
+        resetAutoSlide();
+
+        // Scroll to the corresponding details section
+        const targetId = index === 0 ? '#about' : '#magnus-about';
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          setTimeout(() => {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }, 350); // Delay for slide transition
+        }
+      });
     });
   }
 
