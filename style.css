@@ -2638,35 +2638,37 @@ section {
     }
 
     .hero {
-      height: auto;
-      min-height: auto;
+      height: 100vh;
+      min-height: 560px;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: stretch;
-      overflow: visible;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
     }
 
     .hero-center-content {
-      margin-top: 0;
-      height: 45vh;
-      flex-grow: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 20px 20px;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: -60px;
+      height: auto;
+      display: block;
+      padding: 0 20px;
     }
 
     .hero-info-panel {
-      position: relative;
-      margin-top: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       border-radius: 0;
-      padding: 30px 20px;
+      padding: 24px 20px;
     }
 
     .hero-dots {
-      bottom: auto;
-      top: calc(45vh - 25px);
+      bottom: 225px; /* 15px above the 210px panel */
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .panel-container {
@@ -3001,13 +3003,17 @@ section {
     }
 
     .hero-center-content {
-      height: 45vh;
-      flex-grow: 0;
-      padding: 80px 16px 20px;
+      margin-top: -50px;
+      height: auto;
+      padding: 0 16px;
     }
 
     .hero-info-panel {
       padding: 20px 16px;
+    }
+
+    .hero-dots {
+      bottom: 215px; /* fits the slightly more compact panel on small screens */
     }
 
     .panel-right {
