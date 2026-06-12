@@ -2645,20 +2645,30 @@ section {
       overflow: visible;
     }
 
+    .hero-bg {
+      height: 45vh;
+    }
+
     .hero-center-content {
       margin-top: 0;
-      flex-grow: 1;
+      height: 45vh;
+      flex-grow: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 130px 20px 40px;
+      padding: 80px 20px 20px;
     }
 
     .hero-info-panel {
       position: relative;
-      margin-top: auto;
+      margin-top: 0;
       border-radius: 0;
       padding: 30px 20px;
+    }
+
+    .hero-dots {
+      bottom: auto;
+      top: calc(45vh - 25px);
     }
 
     .panel-container {
@@ -2984,7 +2994,9 @@ section {
     }
 
     .hero-center-content {
-      padding: 110px 16px 30px;
+      height: 45vh;
+      flex-grow: 0;
+      padding: 80px 16px 20px;
     }
 
     .hero-info-panel {
