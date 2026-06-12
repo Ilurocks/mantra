@@ -526,6 +526,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Auto-open modal after 2 seconds on page load
+  setTimeout(() => {
+    if (enquiryModal) {
+      openEnquiryModal();
+    }
+  }, 2000);
+
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && enquiryModal && enquiryModal.classList.contains('active')) {
