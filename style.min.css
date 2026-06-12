@@ -2696,26 +2696,35 @@ section {
     }
 
     .panel-right {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
       width: 100%;
-      gap: 8px;
     }
 
     .btn-panel {
-      flex: 1;
-      font-size: 9px;
-      padding: 12px 6px;
+      font-size: 9.5px;
+      padding: 10px 6px;
       letter-spacing: 0.5px;
       justify-content: center;
       border-radius: 4px;
       white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-panel:last-child {
+      grid-column: span 2;
     }
 
     .btn-panel svg {
-      display: none;
-      /* Hide icons to match reference image */
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-left: 6px;
+      stroke-width: 2px;
+      vertical-align: middle;
+      flex-shrink: 0;
     }
 
 
@@ -3002,15 +3011,29 @@ section {
     }
 
     .panel-right {
-      flex-direction: column;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
     }
 
     .btn-panel {
       width: 100%;
+      font-size: 8.5px;
+      padding: 10px 4px;
       justify-content: center;
-      font-size: 10px;
-      padding: 13px 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-panel:last-child {
+      grid-column: span 2;
+    }
+
+    .btn-panel svg {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 4px;
     }
 
     /* About */
