@@ -204,13 +204,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Switch all page sections to the selected project (0 = Melange, 1 = Magnus)
+  function switchProject(index) {
+    const suffixes = ['melange', 'magnus'];
+    const suffix = suffixes[index];
+
+    // Hero slider
+    const heroTab = document.querySelector(`.hero-tab-btn[data-index="${index}"]`);
+    if (heroTab) heroTab.click();
+
+    // Highlights section
+    const highlightTab = document.querySelector(`.highlight-tab-btn[data-target="highlight-${suffix}"]`);
+    if (highlightTab) highlightTab.click();
+
+    // Elevations & Plans section
+    const plansTab = document.querySelector(`.level1-tab-btn[data-target="plan-${suffix}"]`);
+    if (plansTab) plansTab.click();
+
+    // Amenities section
+    const amenitiesTab = document.querySelector(`.amenities-tab-btn[data-target="amenities-${suffix}"]`);
+    if (amenitiesTab) amenitiesTab.click();
+
+    // Pre-launch section
+    const prelaunchTab = document.querySelector(`.prelaunch-tab-btn[data-target="prelaunch-${suffix}"]`);
+    if (prelaunchTab) prelaunchTab.click();
+
+    // Video section
+    const videoTab = document.querySelector(`.video-tab-btn[data-target="video-${suffix}"]`);
+    if (videoTab) videoTab.click();
+
+    // Location section
+    const locationTab = document.querySelector(`.location-tab-btn[data-target="location-${suffix}"]`);
+    if (locationTab) locationTab.click();
+
+    // Map section
+    const mapTab = document.querySelector(`.map-tab-btn[data-target="map-${suffix}"]`);
+    if (mapTab) mapTab.click();
+  }
+
   // Handle dropdown clicks (nav menu, mega cards & drawer)
   const dropdownItems = document.querySelectorAll('.dropdown-item, .mega-card, .drawer-sublink, .footer-links ul a');
   dropdownItems.forEach(item => {
     item.addEventListener('click', (e) => {
+      const heroIndex = item.getAttribute('data-hero-index');
+      if (heroIndex !== null) {
+        e.preventDefault();
+        switchProject(parseInt(heroIndex));
+        document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+        closeDrawer();
+        return;
+      }
       const category = item.getAttribute('data-filter');
       if (category) {
-        // Find the corresponding tab button and click it
         const targetTab = document.querySelector(`.tab-btn[data-filter="${category}"]`);
         if (targetTab) {
           targetTab.click();
