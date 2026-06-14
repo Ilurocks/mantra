@@ -2487,6 +2487,7 @@ section {
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--text-white);
+    margin-top: 0;
     margin-bottom: 25px;
     text-transform: uppercase;
   }
@@ -2496,6 +2497,7 @@ section {
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--text-white);
+    margin-top: 0;
     margin-bottom: 25px;
     text-transform: uppercase;
   }
