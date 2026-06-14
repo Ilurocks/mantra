@@ -552,14 +552,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 350);
   }
 
-  // Disable popup modal trigger on click (Disabled as requested to open WhatsApp directly)
-  // const enquiryTriggerBtns = document.querySelectorAll('.btn-enquire, .btn-trigger-enquiry, #btnNavEnquire');
-  // enquiryTriggerBtns.forEach(btn => {
-  //   btn.addEventListener('click', (e) => {
-  //     e.preventDefault();
-  //     openEnquiryModal();
-  //   });
-  // });
+  const heroEnquireBtn = document.getElementById('heroEnquireBtn');
+  if (heroEnquireBtn) {
+    heroEnquireBtn.addEventListener('click', openEnquiryModal);
+  }
 
   if (btnEnquiryModalClose) {
     btnEnquiryModalClose.addEventListener('click', closeEnquiryModal);

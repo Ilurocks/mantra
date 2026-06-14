@@ -2897,6 +2897,10 @@ section {
       gap: 40px;
     }
 
+    .footer-links {
+      padding-top: 25px;
+    }
+
     .footer-rera {
       grid-column: span 2;
       align-items: center;
