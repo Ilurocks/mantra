@@ -501,6 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapTabBtns = document.querySelectorAll('.map-tab-btn');
   const mapPanes = document.querySelectorAll('.map-pane');
   const mapLinkBtn = document.getElementById('btn-map-link');
+  const mapWhatsappBtn = document.getElementById('btn-map-whatsapp');
 
   mapTabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -509,10 +510,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const targetId = btn.getAttribute('data-target');
       const mapLink = btn.getAttribute('data-link');
+      const waLink = btn.getAttribute('data-whatsapp');
 
       // Update button link href
       if (mapLinkBtn && mapLink) {
         mapLinkBtn.setAttribute('href', mapLink);
+      }
+
+      // Update WhatsApp link href
+      if (mapWhatsappBtn && waLink) {
+        mapWhatsappBtn.setAttribute('href', waLink);
       }
 
       mapPanes.forEach(pane => {
