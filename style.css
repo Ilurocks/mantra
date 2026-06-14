@@ -2113,13 +2113,7 @@ section {
   padding: 12px 28px;
   border-radius: 4px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-location-gold:hover {
-  background-color: #e0a830;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(207, 167, 57, 0.35);
+  cursor: default;
 }
 
 .btn-get-location {
