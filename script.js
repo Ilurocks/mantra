@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroDetailsTop = document.getElementById('heroDetailsTop');
   const heroDetailsTitle = document.getElementById('heroDetailsTitle');
   const heroDetailsStatus = document.getElementById('heroDetailsStatus');
-  const heroBrochureBtn = document.getElementById('heroBrochureBtn');
+  const heroWhatsappBtn = document.getElementById('heroWhatsappBtn');
   const heroEnquireBtn = document.getElementById('heroEnquireBtn');
   const heroDots = document.querySelectorAll('.hero-dot');
   const heroTabBtns = document.querySelectorAll('.hero-tab-btn');
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroDetailsTop) heroDetailsTop.innerHTML = d.detailsTop || '';
     if (heroDetailsTitle) heroDetailsTitle.textContent = d.detailsTitle || '';
     if (heroDetailsStatus) heroDetailsStatus.textContent = d.detailsStatus || '';
-    if (heroBrochureBtn) heroBrochureBtn.href = d.scroll || '#enquire';
-    if (heroEnquireBtn) heroEnquireBtn.href = d.enquire || '#enquire';
+    if (heroWhatsappBtn) heroWhatsappBtn.href = d.whatsapp || 'https://wa.me/917387522292';
+    if (heroEnquireBtn) heroEnquireBtn.href = d.enquire || 'https://wa.me/917387522292?text=Hello%2C%20I%20am%20interested%20in%20Mantra%20Melange.%20Please%20share%20more%20details.';
   }
 
   if (heroBgs.length > 0) {
@@ -552,13 +552,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 350);
   }
 
-  const enquiryTriggerBtns = document.querySelectorAll('.btn-enquire, .btn-trigger-enquiry, #btnNavEnquire');
-  enquiryTriggerBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openEnquiryModal();
-    });
-  });
+  // Disable popup modal trigger on click (Disabled as requested to open WhatsApp directly)
+  // const enquiryTriggerBtns = document.querySelectorAll('.btn-enquire, .btn-trigger-enquiry, #btnNavEnquire');
+  // enquiryTriggerBtns.forEach(btn => {
+  //   btn.addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //     openEnquiryModal();
+  //   });
+  // });
 
   if (btnEnquiryModalClose) {
     btnEnquiryModalClose.addEventListener('click', closeEnquiryModal);
@@ -571,12 +572,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-open modal after 2 seconds on page load
-  setTimeout(() => {
-    if (enquiryModal) {
-      openEnquiryModal();
-    }
-  }, 2000);
+  // Auto-open modal after 2 seconds on page load (Disabled as requested)
+  // setTimeout(() => {
+  //   if (enquiryModal) {
+  //     openEnquiryModal();
+  //   }
+  // }, 2000);
 
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
@@ -710,11 +711,21 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(`Message: ${message}`);
       console.log('-------------------------------------');
 
+      // Construct WhatsApp URL
+      const selectedProp = property === 'melange' ? 'Mantra Melange' : (property === 'magnus' ? 'Mantra Magnus' : (property === 'marvilla' ? 'Mantra Marvilla' : 'Mantra Properties'));
+      const textMsg = `Hello, I am interested in ${selectedProp}. Here are my details:
+- Name: ${name}
+- Email: ${email}
+- Phone: ${phone}
+${message ? `- Message: ${message}` : ''}`;
+      
+      const waUrl = `https://wa.me/917387522292?text=${encodeURIComponent(textMsg)}`;
+      
       // Clear the form
       overlapEnquiryForm.reset();
 
-      // Show Thank You modal
-      openThankYouModal();
+      // Open WhatsApp
+      window.open(waUrl, '_blank');
     });
   }
 

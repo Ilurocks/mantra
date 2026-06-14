@@ -541,7 +541,7 @@ button {
   transition: var(--transition-smooth);
 }
 
-.icon-mail {
+.icon-whatsapp {
   width: 14px;
   height: 14px;
 }
@@ -556,7 +556,7 @@ button {
 /* Phone Button */
 .btn-phone {
   color: var(--text-white);
-  display: flex;
+  display: none; /* Hidden on desktop */
   align-items: center;
   justify-content: center;
   padding: 8px;
@@ -2339,6 +2339,27 @@ section {
     line-height: 1.7;
   }
 
+  .footer-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    align-self: center;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background 0.2s;
+  }
+  .footer-whatsapp-btn:hover {
+    background: #1ebe5d;
+  }
+
   .social-links {
     display: flex;
     gap: 12px;
@@ -2451,6 +2472,7 @@ section {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
     text-align: center;
   }
@@ -2698,8 +2720,8 @@ section {
     }
 
     .panel-right {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 10px;
       width: 100%;
     }
@@ -2713,16 +2735,13 @@ section {
       white-space: nowrap;
       display: flex;
       align-items: center;
-    }
-
-    .btn-panel:last-child {
-      grid-column: span 2;
+      width: 100%;
     }
 
     .btn-panel svg {
       display: inline-block;
-      width: 12px;
-      height: 12px;
+      width: 16px;
+      height: 16px;
       margin-left: 6px;
       stroke-width: 2px;
       vertical-align: middle;
@@ -2818,8 +2837,24 @@ section {
       display: none;
     }
 
-    .nav-actions .btn-enquire {
-      padding: 8px 10px;
+    .nav-actions .btn-enquire,
+    .nav-actions .btn-phone {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: transparent;
+      color: var(--text-white);
+    }
+
+    .nav-actions .btn-enquire svg,
+    .nav-actions .btn-phone svg {
+      width: 20px;
+      height: 20px;
     }
 
     .about {
@@ -3017,8 +3052,8 @@ section {
     }
 
     .panel-right {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 8px;
     }
 
@@ -3031,14 +3066,10 @@ section {
       align-items: center;
     }
 
-    .btn-panel:last-child {
-      grid-column: span 2;
-    }
-
     .btn-panel svg {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
       margin-left: 4px;
     }
 

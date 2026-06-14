@@ -194,6 +194,7 @@ button {
 /* Logo styling */
 .logo {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .logo-wrapper {
@@ -215,6 +216,30 @@ button {
   text-transform: uppercase;
   color: var(--text-white);
   margin-top: -3px;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: var(--transition-smooth);
+}
+
+.header.scrolled .logo-image {
+  height: 40px;
+}
+
+.footer-logo .logo-image {
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 38px;
+  }
+  .header.scrolled .logo-image {
+    height: 32px;
+  }
 }
 
 /* Nav Menu (Left-aligned next to Logo) */
@@ -566,7 +591,7 @@ button {
   transition: var(--transition-smooth);
 }
 
-.icon-mail {
+.icon-whatsapp {
   width: 14px;
   height: 14px;
 }
@@ -581,7 +606,7 @@ button {
 /* Phone Button */
 .btn-phone {
   color: var(--text-white);
-  display: flex;
+  display: none; /* Hidden on desktop */
   align-items: center;
   justify-content: center;
   padding: 8px;
@@ -2369,7 +2394,7 @@ section {
     align-items: center;
     gap: 8px;
     width: fit-content;
-    align-self: flex-start;
+    align-self: center;
     background: #25D366;
     color: #fff;
     text-decoration: none;
@@ -2497,7 +2522,7 @@ section {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
     text-align: center;
   }
@@ -2509,7 +2534,7 @@ section {
   }
 
   .footer-bottom .footer-whatsapp-btn {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .footer-bottom .rera-disclaimer {
@@ -2759,8 +2784,8 @@ section {
     }
 
     .panel-right {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 10px;
       width: 100%;
     }
@@ -2774,16 +2799,13 @@ section {
       white-space: nowrap;
       display: flex;
       align-items: center;
-    }
-
-    .btn-panel:last-child {
-      grid-column: span 2;
+      width: 100%;
     }
 
     .btn-panel svg {
       display: inline-block;
-      width: 12px;
-      height: 12px;
+      width: 16px;
+      height: 16px;
       margin-left: 6px;
       stroke-width: 2px;
       vertical-align: middle;
@@ -2883,8 +2905,24 @@ section {
       display: none;
     }
 
-    .nav-actions .btn-enquire {
-      padding: 8px 10px;
+    .nav-actions .btn-enquire,
+    .nav-actions .btn-phone {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: transparent;
+      color: var(--text-white);
+    }
+
+    .nav-actions .btn-enquire svg,
+    .nav-actions .btn-phone svg {
+      width: 20px;
+      height: 20px;
     }
 
     .about {
@@ -3097,8 +3135,8 @@ section {
     }
 
     .panel-right {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 8px;
     }
 
@@ -3111,14 +3149,10 @@ section {
       align-items: center;
     }
 
-    .btn-panel:last-child {
-      grid-column: span 2;
-    }
-
     .btn-panel svg {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
       margin-left: 4px;
     }
 
@@ -3216,11 +3250,11 @@ section {
   .call-float {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     background: #1a1c1f;
     border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 50px;
-    padding: 0 18px 0 6px;
+    border-radius: 50%;
+    width: 58px;
     height: 58px;
     text-decoration: none;
     cursor: pointer;
@@ -3245,22 +3279,17 @@ section {
     color: #fff;
   }
   .call-label {
-    color: #fff;
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
+    display: none;
   }
 
   /* --- Floating WhatsApp Button --- */
   .whatsapp-float {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     background: #25D366;
-    border-radius: 50px;
-    padding: 0 18px 0 6px;
+    border-radius: 50%;
+    width: 58px;
     height: 58px;
     text-decoration: none;
     cursor: pointer;
@@ -3323,26 +3352,28 @@ section {
       right: 16px;
     }
     .call-float {
+      width: 50px;
       height: 50px;
-      padding: 0 12px 0 5px;
+      padding: 0;
     }
     .call-icon-wrapper {
       width: 38px;
       height: 38px;
     }
     .call-label {
-      font-size: 0.75rem;
+      display: none;
     }
     .whatsapp-float {
+      width: 50px;
       height: 50px;
-      padding: 0 12px 0 5px;
+      padding: 0;
     }
     .whatsapp-icon-wrapper {
       width: 38px;
       height: 38px;
     }
     .whatsapp-label {
-      font-size: 0.75rem;
+      display: none;
     }
   }
 
