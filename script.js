@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroDetailsTitle) heroDetailsTitle.textContent = d.detailsTitle || '';
     if (heroDetailsStatus) heroDetailsStatus.textContent = d.detailsStatus || '';
     if (heroWhatsappBtn) heroWhatsappBtn.href = d.whatsapp || 'https://wa.me/917387522292';
-    if (heroEnquireBtn) heroEnquireBtn.href = d.enquire || 'https://wa.me/917387522292?text=Hello%2C%20I%20am%20interested%20in%20Mantra%20Melange.%20Please%20share%20more%20details.';
   }
 
   if (heroBgs.length > 0) {
@@ -552,7 +551,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 350);
   }
 
-  const heroEnquireBtn = document.getElementById('heroEnquireBtn');
   if (heroEnquireBtn) {
     heroEnquireBtn.addEventListener('click', openEnquiryModal);
   }
