@@ -1172,12 +1172,34 @@ section {
 .section-title-dark {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 3.8vw, 2.5rem);
-  font-weight: 400;
+  font-weight: 600;
   /* Regular serif weight exactly matching image */
   line-height: 1.25;
   color: var(--text-white);
-  margin-bottom: 25px;
+  margin-bottom: 12px;
   letter-spacing: -0.2px;
+}
+
+.section-subtitle-spec {
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-white);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.section-price-spec {
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
 }
 
 .about-text-dark {
@@ -1225,6 +1247,182 @@ section {
 
 .lifestyle-img-wrapper:hover .lifestyle-img {
   transform: scale(1.025);
+}
+
+/* --- Download Brochure Action --- */
+.about-actions {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-about-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+}
+
+.btn-about-action.btn-gold {
+  background-color: var(--accent-gold);
+  color: var(--bg-primary);
+  border: 1px solid var(--accent-gold);
+}
+
+.btn-about-action.btn-gold:hover {
+  background-color: var(--accent-gold-hover);
+  border-color: var(--accent-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 168, 128, 0.25);
+}
+
+.icon-download {
+  width: 14px;
+  height: 14px;
+}
+
+/* --- Price Range Badge --- */
+.price-range-badge {
+  display: inline-block;
+  margin-left: 12px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  background-color: rgba(197, 168, 128, 0.08);
+  border: 1px solid var(--border-gold);
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
+/* --- Configurations & Pricing Display --- */
+.about-pricing-block {
+  margin-top: 35px;
+  max-width: 680px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 25px;
+}
+
+.about-pricing-title {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-pricing-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.about-pricing-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 16px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+.about-pricing-row:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-pricing-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-pricing-cell.price {
+  margin-left: auto;
+  margin-right: 15px;
+  text-align: right;
+}
+
+.about-pricing-cell.action {
+  flex-shrink: 0;
+}
+
+.cell-primary {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-white);
+  white-space: nowrap;
+}
+
+.cell-secondary {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.about-pricing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--bg-primary);
+  background-color: var(--accent-gold);
+  border-radius: 4px;
+  transition: var(--transition-fast);
+  text-align: center;
+}
+
+.about-pricing-btn:hover {
+  background-color: var(--accent-gold-hover);
+  color: var(--bg-primary);
+  transform: scale(1.03);
+}
+
+/* Extra responsiveness adjustments for tablets and mobiles */
+@media (max-width: 991px) {
+  .about-pricing-table {
+    grid-template-columns: 1fr;
+  }
+  .about-pricing-block {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-pricing-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 15px;
+  }
+  .about-pricing-cell.price {
+    text-align: left;
+  }
+  .about-pricing-cell.action {
+    align-items: stretch;
+  }
 }
 
 /* --- Floor Plans Section --- */
@@ -2739,6 +2937,25 @@ section {
       padding: 0 40px;
     }
 
+    .about-visuals {
+      order: 1; /* Always show image on top for mobile */
+    }
+
+    .about-info {
+      order: 2; /* Always show text, pricing, and brochure below image */
+    }
+
+    .about-actions {
+      margin-top: 25px;
+      margin-bottom: 15px;
+      justify-content: center;
+    }
+
+    .btn-about-action {
+      width: 100%;
+      justify-content: center;
+    }
+
     .projects-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -2808,18 +3025,18 @@ section {
       left: 0;
       width: 100%;
       border-radius: 0;
-      padding: 24px 20px;
+      padding: 12px 16px;
     }
 
     .hero-dots {
-      bottom: 225px; /* 15px above the 210px panel */
+      bottom: 155px; /* Adjust to stay just above the shorter panel */
       left: 50%;
       transform: translateX(-50%);
     }
 
     .panel-container {
       flex-direction: column;
-      gap: 15px;
+      gap: 10px;
       text-align: center;
     }
 
@@ -2839,18 +3056,23 @@ section {
     }
 
     .project-details {
-      display: none;
-      /* Hide details on mobile to match reference */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 4px;
+      margin: 6px 0;
     }
 
     .panel-right {
       display: flex;
-      flex-direction: column;
+      flex-direction: row; /* side-by-side buttons */
       gap: 10px;
       width: 100%;
     }
 
     .btn-panel {
+      flex: 1; /* expand buttons equally */
       font-size: 9.5px;
       padding: 10px 6px;
       letter-spacing: 0.5px;
@@ -2859,7 +3081,7 @@ section {
       white-space: nowrap;
       display: flex;
       align-items: center;
-      width: 100%;
+      width: auto;
     }
 
     .btn-panel svg {
@@ -3192,21 +3414,22 @@ section {
     }
 
     .hero-info-panel {
-      padding: 20px 16px;
+      padding: 12px 16px;
     }
 
     .hero-dots {
-      bottom: 215px; /* fits the slightly more compact panel on small screens */
+      bottom: 145px; /* Adjust to stay just above the shorter panel */
     }
 
     .panel-right {
       display: flex;
-      flex-direction: column;
+      flex-direction: row; /* side-by-side buttons */
       gap: 8px;
     }
 
     .btn-panel {
-      width: 100%;
+      width: auto;
+      flex: 1; /* expand buttons equally */
       font-size: 8.5px;
       padding: 10px 4px;
       justify-content: center;
@@ -5336,7 +5559,7 @@ section {
   
   .highlight-tab-btn {
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-light);
     border-radius: 4px;
     padding: 12px;
   }
@@ -5382,19 +5605,23 @@ section {
 /* --- Responsive Hero & Background Images for Performance --- */
 .hero-bg-melange {
   background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.35)), url('assets/mantra_melange_mobile.webp');
+  background-position: 25% center;
 }
 @media (min-width: 768px) {
   .hero-bg-melange {
     background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.35)), url('assets/mantra_melange.webp');
+    background-position: center 15%;
   }
 }
 
 .hero-bg-aerial {
   background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial_Cam_mobile.webp');
+  background-position: center center;
 }
 @media (min-width: 768px) {
   .hero-bg-aerial {
     background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/Aerial_Cam.webp');
+    background-position: center 15%;
   }
 }
 

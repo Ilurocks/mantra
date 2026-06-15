@@ -555,6 +555,15 @@ document.addEventListener('DOMContentLoaded', () => {
     heroEnquireBtn.addEventListener('click', openEnquiryModal);
   }
 
+  // Open modal on Download Brochure clicks
+  const modalTriggers = document.querySelectorAll('.btn-open-modal');
+  modalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openEnquiryModal();
+    });
+  });
+
   if (btnEnquiryModalClose) {
     btnEnquiryModalClose.addEventListener('click', closeEnquiryModal);
   }
@@ -599,9 +608,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       
-      // Close Enquiry Modal and open Thank You Modal
-      closeEnquiryModal();
-      setTimeout(openThankYouModal, 350);
+      // Redirect to Thank You Page
+      window.location.href = 'thank-you.html';
     });
   }
 
@@ -718,8 +726,11 @@ ${message ? `- Message: ${message}` : ''}`;
       // Clear the form
       overlapEnquiryForm.reset();
 
-      // Open WhatsApp
+      // Open WhatsApp in new tab
       window.open(waUrl, '_blank');
+
+      // Redirect current tab to Thank You page
+      window.location.href = 'thank-you.html';
     });
   }
 
