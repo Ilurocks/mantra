@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
         _subject: "New Lead - Mantra Properties (Main Form)"
       };
 
-      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+      fetch('https://formsubmit.co/ajax/vikalpsm@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -640,7 +640,7 @@ document.addEventListener('DOMContentLoaded', () => {
         _subject: "New Lead - Mantra Properties (Popup Form)"
       };
 
-      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+      fetch('https://formsubmit.co/ajax/vikalpsm@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -769,7 +769,7 @@ document.addEventListener('DOMContentLoaded', () => {
         _subject: "New Lead - Mantra Properties (Bottom Form)"
       };
 
-      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+      fetch('https://formsubmit.co/ajax/vikalpsm@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
