@@ -342,22 +342,38 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalText = btnSubmitEnquiry.innerHTML;
       btnSubmitEnquiry.innerHTML = '<span>SENDING...</span>';
 
-      setTimeout(() => {
-        // Success actions
+      // Send to Email via FormSubmit
+      const formData = {
+        name: name,
+        phone: phone,
+        email: email,
+        project: project,
+        message: document.getElementById('clientMessage')?.value || '',
+        _subject: "New Lead - Mantra Properties (Main Form)"
+      };
+
+      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(() => {
         mainEnquiryForm.style.display = 'none';
         successMessage.style.display = 'flex';
-        
-        console.log('--- ENQUIRY FORM SUBMITTED ---');
-        console.log(`Name: ${name}`);
-        console.log(`Phone: ${phone}`);
-        console.log(`Email: ${email}`);
-        console.log(`Project: ${project}`);
-        console.log(`Message: ${document.getElementById('clientMessage').value}`);
-        console.log('------------------------------');
-
+      })
+      .catch((err) => {
+        console.error('Email send failed:', err);
+        // Fallback to show success message anyway
+        mainEnquiryForm.style.display = 'none';
+        successMessage.style.display = 'flex';
+      })
+      .finally(() => {
         btnSubmitEnquiry.disabled = false;
         btnSubmitEnquiry.innerHTML = originalText;
-      }, 1500);
+      });
     });
   }
 
@@ -607,9 +623,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         return;
       }
-      
-      // Redirect to Thank You Page
-      window.location.href = 'thank-you.html';
+
+      // Show sending state
+      const btnSubmit = document.getElementById('btnEpfSubmit');
+      const originalText = btnSubmit.innerHTML;
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = '<span>SENDING...</span>';
+
+      // Send to Email via FormSubmit
+      const formData = {
+        name: name,
+        phone: phone,
+        email: email,
+        project: document.getElementById('epfProject')?.value || 'Not specified',
+        message: document.getElementById('epfMessage')?.value || '',
+        _subject: "New Lead - Mantra Properties (Popup Form)"
+      };
+
+      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(() => {
+        window.location.href = 'thank-you.html';
+      })
+      .catch((err) => {
+        console.error('Email send failed:', err);
+        // Fallback: still redirect to thank you page
+        window.location.href = 'thank-you.html';
+      });
     });
   }
 
@@ -705,32 +751,63 @@ document.addEventListener('DOMContentLoaded', () => {
       const property = overlapEnquiryForm.querySelector('select')?.value;
       const message = overlapEnquiryForm.querySelector('textarea')?.value.trim();
 
-      console.log('--- OVERLAP CONTACT FORM SUBMITTED ---');
-      console.log(`Name: ${name}`);
-      console.log(`Email: ${email}`);
-      console.log(`Phone: ${phone}`);
-      console.log(`Property: ${property}`);
-      console.log(`Message: ${message}`);
-      console.log('-------------------------------------');
+      // Show sending state
+      const btnSubmit = overlapEnquiryForm.querySelector('button[type="submit"]');
+      const originalText = btnSubmit.innerHTML;
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = '<span>SENDING...</span>';
 
-      // Construct WhatsApp URL
       const selectedProp = property === 'melange' ? 'Mantra Melange' : (property === 'magnus' ? 'Mantra Magnus' : (property === 'marvilla' ? 'Mantra Marvilla' : 'Mantra Properties'));
-      const textMsg = `Hello, I am interested in ${selectedProp}. Here are my details:
+
+      // Send to Email via FormSubmit
+      const formData = {
+        name: name,
+        email: email,
+        phone: phone,
+        project: selectedProp,
+        message: message || '',
+        _subject: "New Lead - Mantra Properties (Bottom Form)"
+      };
+
+      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(() => {
+        // Construct WhatsApp URL
+        const textMsg = `Hello, I am interested in ${selectedProp}. Here are my details:
 - Name: ${name}
 - Email: ${email}
 - Phone: ${phone}
 ${message ? `- Message: ${message}` : ''}`;
-      
-      const waUrl = `https://wa.me/917387522292?text=${encodeURIComponent(textMsg)}`;
-      
-      // Clear the form
-      overlapEnquiryForm.reset();
-
-      // Open WhatsApp in new tab
-      window.open(waUrl, '_blank');
-
-      // Redirect current tab to Thank You page
-      window.location.href = 'thank-you.html';
+        const waUrl = `https://wa.me/917387522292?text=${encodeURIComponent(textMsg)}`;
+        
+        // Open WhatsApp in new tab
+        window.open(waUrl, '_blank');
+        
+        // Redirect current tab to Thank You page
+        window.location.href = 'thank-you.html';
+      })
+      .catch((err) => {
+        console.error('Email send failed:', err);
+        // Fallback: still open WhatsApp and redirect
+        const textMsg = `Hello, I am interested in ${selectedProp}. Here are my details:
+- Name: ${name}
+- Email: ${email}
+- Phone: ${phone}
+${message ? `- Message: ${message}` : ''}`;
+        const waUrl = `https://wa.me/917387522292?text=${encodeURIComponent(textMsg)}`;
+        window.open(waUrl, '_blank');
+        window.location.href = 'thank-you.html';
+      })
+      .finally(() => {
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = originalText;
+      });
     });
   }
 
