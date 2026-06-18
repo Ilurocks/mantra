@@ -649,12 +649,12 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(formData)
       })
       .then(() => {
-        window.location.href = 'thank-you.html';
+        window.location.href = 'thank-you';
       })
       .catch((err) => {
         console.error('Email send failed:', err);
         // Fallback: still redirect to thank you page
-        window.location.href = 'thank-you.html';
+        window.location.href = 'thank-you';
       });
     });
   }
@@ -790,7 +790,7 @@ ${message ? `- Message: ${message}` : ''}`;
         window.open(waUrl, '_blank');
         
         // Redirect current tab to Thank You page
-        window.location.href = 'thank-you.html';
+        window.location.href = 'thank-you';
       })
       .catch((err) => {
         console.error('Email send failed:', err);
@@ -802,7 +802,7 @@ ${message ? `- Message: ${message}` : ''}`;
 ${message ? `- Message: ${message}` : ''}`;
         const waUrl = `https://wa.me/917387522292?text=${encodeURIComponent(textMsg)}`;
         window.open(waUrl, '_blank');
-        window.location.href = 'thank-you.html';
+        window.location.href = 'thank-you';
       })
       .finally(() => {
         btnSubmit.disabled = false;
