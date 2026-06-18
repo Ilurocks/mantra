@@ -352,6 +352,11 @@ document.addEventListener('DOMContentLoaded', () => {
         _subject: "New Lead - Mantra Properties (Main Form)"
       };
 
+      // Save details to sessionStorage
+      sessionStorage.setItem('leadName', name);
+      sessionStorage.setItem('leadPhone', phone);
+      sessionStorage.setItem('leadEmail', email);
+
       fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
         method: 'POST',
         headers: {
@@ -361,14 +366,11 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(formData)
       })
       .then(() => {
-        mainEnquiryForm.style.display = 'none';
-        successMessage.style.display = 'flex';
+        window.location.href = 'thank-you.html';
       })
       .catch((err) => {
         console.error('Email send failed:', err);
-        // Fallback to show success message anyway
-        mainEnquiryForm.style.display = 'none';
-        successMessage.style.display = 'flex';
+        window.location.href = 'thank-you.html';
       })
       .finally(() => {
         btnSubmitEnquiry.disabled = false;
@@ -640,6 +642,11 @@ document.addEventListener('DOMContentLoaded', () => {
         _subject: "New Lead - Mantra Properties (Popup Form)"
       };
 
+      // Save details to sessionStorage
+      sessionStorage.setItem('leadName', name);
+      sessionStorage.setItem('leadPhone', phone);
+      sessionStorage.setItem('leadEmail', email);
+
       fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
         method: 'POST',
         headers: {
@@ -649,12 +656,12 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(formData)
       })
       .then(() => {
-        window.location.href = 'thank-you';
+        window.location.href = 'thank-you.html';
       })
       .catch((err) => {
         console.error('Email send failed:', err);
         // Fallback: still redirect to thank you page
-        window.location.href = 'thank-you';
+        window.location.href = 'thank-you.html';
       });
     });
   }
@@ -769,6 +776,11 @@ document.addEventListener('DOMContentLoaded', () => {
         _subject: "New Lead - Mantra Properties (Bottom Form)"
       };
 
+      // Save details to sessionStorage
+      sessionStorage.setItem('leadName', name);
+      sessionStorage.setItem('leadPhone', phone);
+      sessionStorage.setItem('leadEmail', email);
+
       fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
         method: 'POST',
         headers: {
@@ -790,7 +802,7 @@ ${message ? `- Message: ${message}` : ''}`;
         window.open(waUrl, '_blank');
         
         // Redirect current tab to Thank You page
-        window.location.href = 'thank-you';
+        window.location.href = 'thank-you.html';
       })
       .catch((err) => {
         console.error('Email send failed:', err);
@@ -802,7 +814,7 @@ ${message ? `- Message: ${message}` : ''}`;
 ${message ? `- Message: ${message}` : ''}`;
         const waUrl = `https://wa.me/917387522292?text=${encodeURIComponent(textMsg)}`;
         window.open(waUrl, '_blank');
-        window.location.href = 'thank-you';
+        window.location.href = 'thank-you.html';
       })
       .finally(() => {
         btnSubmit.disabled = false;

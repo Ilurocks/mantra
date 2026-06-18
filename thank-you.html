@@ -22,187 +22,126 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-    body {
+    /* Content wrapper to center the card, adjusting for fixed header */
+    .thankyou-wrapper {
+      padding-top: var(--header-height);
       background-color: var(--bg-primary);
-      color: var(--text-light);
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-      justify-content: space-between;
       align-items: center;
-      padding: 2rem 1rem;
+      justify-content: center;
+      min-height: calc(100vh - var(--header-height) - 350px);
+      padding: 80px 20px;
     }
 
-    .thankyou-header {
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .thankyou-logo {
-      height: 60px;
-      width: auto;
-      margin: 0 auto;
-    }
-
-    .thankyou-container {
+    /* Premium dark card matching the theme variables */
+    .thankyou-card {
       background: var(--bg-secondary);
-      border: 1px solid var(--border-gold);
+      border: 1.5px solid var(--accent-gold);
       border-radius: 12px;
       padding: 3.5rem 2.5rem;
       text-align: center;
-      max-width: 600px;
+      max-width: 680px;
       width: 100%;
       box-shadow: var(--shadow-premium);
-      backdrop-filter: var(--glass-blur);
-      animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .thankyou-icon-wrapper {
-      width: 80px;
-      height: 80px;
-      background: rgba(197, 168, 128, 0.1);
-      border: 1px solid var(--accent-gold);
-      border-radius: 50%;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      margin: 0 auto 2rem;
       position: relative;
     }
 
-    .checkmark-svg {
-      width: 40px;
-      height: 40px;
-      stroke: var(--accent-gold);
-      stroke-width: 3;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
+    .thankyou-card-logo {
+      height: 55px;
+      width: auto;
+      margin-bottom: 1.5rem;
+      display: block;
     }
 
-    .checkmark-circle {
-      stroke-dasharray: 166;
-      stroke-dashoffset: 166;
-      stroke-width: 2;
-      stroke-miterlimit: 10;
-      stroke: var(--accent-gold);
-      fill: none;
-      animation: strokeCircle 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
-    }
-
-    .checkmark-check {
-      transform-origin: 50% 50%;
-      stroke-dasharray: 48;
-      stroke-dashoffset: 48;
-      animation: strokeCheck 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
-    }
-
-    @keyframes strokeCircle {
-      100% {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    @keyframes strokeCheck {
-      100% {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    .thankyou-title {
+    .thankyou-card-title {
       font-family: var(--font-serif);
       font-size: 2.8rem;
       color: var(--accent-gold);
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
       font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    .thankyou-subtitle {
-      font-size: 1.1rem;
-      font-weight: 600;
       letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--text-white);
-      margin-bottom: 1.5rem;
     }
 
-    .thankyou-divider {
-      width: 60px;
-      height: 2px;
-      background: var(--accent-gold);
-      margin: 0 auto 1.5rem;
-    }
-
-    .thankyou-message {
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn-thankyou-home {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--accent-gold);
-      color: var(--bg-darker);
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 1rem 2.5rem;
-      border-radius: 4px;
-      border: 1px solid var(--accent-gold);
-      transition: var(--transition-smooth);
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(197, 168, 128, 0.2);
-    }
-
-    .btn-thankyou-home:hover {
-      background: transparent;
-      color: var(--accent-gold);
-      box-shadow: none;
-      transform: translateY(-2px);
-    }
-
-    .btn-thankyou-home:active {
-      transform: translateY(0);
-    }
-
-    .thankyou-footer {
+    .thankyou-details-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
       width: 100%;
-      max-width: 600px;
-      text-align: center;
-      font-size: 0.8rem;
+      max-width: 440px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+
+    .thankyou-detail-row {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+    }
+
+    .thankyou-detail-label {
+      font-weight: 700;
+      width: 120px;
+      flex-shrink: 0;
+      color: var(--accent-gold);
+    }
+
+    .thankyou-detail-separator {
+      margin-right: 12px;
+      color: var(--text-light);
+      font-weight: 700;
+    }
+
+    .thankyou-detail-value {
+      font-weight: 500;
+      color: var(--text-white);
+      word-break: break-all;
+    }
+
+    /* Breadcrumbs styled link */
+    .thankyou-breadcrumbs {
+      font-size: 1rem;
+      font-weight: 500;
       color: var(--text-muted);
-      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .thankyou-breadcrumbs a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-weight: 600;
+    }
+
+    .thankyou-breadcrumbs a:hover {
+      color: var(--accent-gold);
+    }
+
+    .thankyou-breadcrumbs span {
+      color: var(--text-muted);
+      opacity: 0.7;
     }
 
     @media (max-width: 576px) {
-      .thankyou-container {
+      .thankyou-card {
         padding: 2.5rem 1.5rem;
       }
-      .thankyou-title {
+      .thankyou-card-title {
         font-size: 2.2rem;
       }
-      .thankyou-subtitle {
+      .thankyou-details-list {
         font-size: 0.95rem;
+      }
+      .thankyou-detail-label {
+        width: 95px;
       }
     }
   </style>
@@ -213,35 +152,258 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header class="thankyou-header">
-    <img src="assets/logo.png" alt="Mantra Properties Logo" class="thankyou-logo" />
+  <!-- Custom Responsive Navbar -->
+  <header class="header">
+    <div class="nav-container">
+      
+      <!-- Left side: Hamburger Toggle & Logo -->
+      <div class="nav-left-group">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span class="bar bar-top"></span>
+          <span class="bar bar-bottom"></span>
+        </button>
+
+        <a href="./" class="logo" aria-label="Mantra Properties Home">
+          <img src="assets/logo.png" alt="Mantra Properties Logo" class="logo-image" />
+        </a>
+      </div>
+
+      <!-- Navigation links (Desktop) -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./#about" class="nav-link">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown mega-dropdown">
+            <a href="./#projects" class="nav-link" id="residentialLink">
+              RESIDENTIAL 
+              <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="mega-menu">
+              <div class="mega-menu-container">
+                <!-- Card 1 -->
+                <a href="./" class="mega-card active-property" data-filter="residential" data-hero-index="0">
+                  <div class="mega-card-img-wrapper">
+                    <img src="assets/mantra_melange.webp" alt="Mantra Melange" loading="lazy" decoding="async" width="280" height="180">
+                  </div>
+                  <h4 class="mega-card-title">Mantra Melange</h4>
+                  <p class="mega-card-subtitle">Kharadi <span>•</span> Ongoing Project</p>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="#" class="mega-card" data-filter="residential" data-hero-index="1">
+                  <div class="mega-card-img-wrapper">
+                    <img src="assets/mantra_magnus.webp" alt="Mantra Magnus" loading="lazy" decoding="async" width="280" height="180">
+                  </div>
+                  <h4 class="mega-card-title">Mantra Magnus</h4>
+                  <p class="mega-card-subtitle">Mundhwa <span>•</span> Ongoing Project</p>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right-side Actions -->
+      <div class="nav-actions">
+        <!-- Phone Number -->
+        <a href="tel:7387522292" class="nav-phone" aria-label="Call 7387522292">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span>+91 73875 22292</span>
+        </a>
+
+        <!-- Phone Icon -->
+        <a href="tel:7387522292" class="btn-phone" aria-label="Call 7387522292">
+          <svg class="icon-call" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+          </svg>
+        </a>
+
+        <!-- Whatsapp Button -->
+        <a href="https://wa.me/917387522292?text=Hello%2C%20I%20am%20interested%20in%20Mantra%20properties.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" class="btn-enquire" id="btnNavEnquire" aria-label="Chat on WhatsApp" style="display: inline-flex; align-items: center; justify-content: center; height: 40px; text-decoration: none;">
+          <span>WHATSAPP</span>
+          <svg class="icon-whatsapp" viewBox="0 0 448 512" fill="currentColor">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 496l133.9-35.1c32.7 17.8 69.4 27.2 106.7 27.2h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-79.8 20.9 21.3-77.8-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </header>
 
-  <main class="thankyou-container">
-    <!-- Animated Checkmark Icon -->
-    <div class="thankyou-icon-wrapper">
-      <svg class="checkmark-svg" viewBox="0 0 52 52">
-        <circle class="checkmark-circle" cx="26" cy="26" r="25" />
-        <path class="checkmark-check" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-      </svg>
+  <!-- Mobile Navigation Overlay (drawer style) -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <span class="drawer-title">MENU</span>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
     </div>
-    
-    <h1 class="thankyou-title">Thank You!</h1>
-    <p class="thankyou-subtitle">Your Enquiry has been Received</p>
-    
-    <div class="thankyou-divider"></div>
-    
-    <p class="thankyou-message">
-      Thank you for your interest in Mantra Properties. An elite housing relationship advisor will contact you within the next 24 hours to share the project walkthrough, unit plans, and exclusive pricing details.
-    </p>
-    
-    <a href="./" class="btn-thankyou-home">
-      <span>Back To Home</span>
-    </a>
+    <ul class="drawer-list">
+      <li><a href="./#about" class="drawer-link">ABOUT US</a></li>
+      <li class="drawer-dropdown-wrapper">
+        <button class="drawer-dropdown-btn">
+          RESIDENTIAL
+          <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="drawer-submenu">
+          <a href="./#projects" class="drawer-sublink" data-filter="residential" data-hero-index="0">Mantra Melange</a>
+          <a href="./#projects" class="drawer-sublink" data-filter="residential" data-hero-index="1">Mantra Magnus</a>
+        </div>
+      </li>
+      <li><a href="https://wa.me/917387522292?text=Hello%2C%20I%20am%20interested%20in%20Mantra%20properties.%20Please%20share%20more%20details." class="drawer-link" target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a></li>
+      <li style="margin-top: 10px; border-top: 1px solid var(--border-light); padding-top: 20px;">
+        <a href="tel:7387522292" class="drawer-link" style="display: flex; align-items: center; justify-content: center; color: var(--accent-gold);" aria-label="Call 7387522292">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="flex-shrink: 0;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Main thank you section -->
+  <main class="thankyou-wrapper">
+    <div class="thankyou-card">
+      <!-- Logo inside the card -->
+      <img src="assets/logo.png" alt="Mantra Properties Logo" class="thankyou-card-logo" />
+      
+      <!-- Thank You Title -->
+      <h1 class="thankyou-card-title">Thank You</h1>
+      
+      <!-- Lead Details List -->
+      <div class="thankyou-details-list">
+        <div class="thankyou-detail-row">
+          <span class="thankyou-detail-label">Full Name</span>
+          <span class="thankyou-detail-separator">:</span>
+          <span class="thankyou-detail-value" id="displayFullName">test lead lead</span>
+        </div>
+        <div class="thankyou-detail-row">
+          <span class="thankyou-detail-label">Phone</span>
+          <span class="thankyou-detail-separator">:</span>
+          <span class="thankyou-detail-value" id="displayPhone">+91 9234567898</span>
+        </div>
+        <div class="thankyou-detail-row">
+          <span class="thankyou-detail-label">Email</span>
+          <span class="thankyou-detail-separator">:</span>
+          <span class="thankyou-detail-value" id="displayEmail">ccdsdsd@gmail.com</span>
+        </div>
+      </div>
+      
+      <!-- Breadcrumbs Links -->
+      <div class="thankyou-breadcrumbs">
+        <a href="./">Home</a>
+        <span>/</span>
+        <strong>Thank You</strong>
+      </div>
+    </div>
   </main>
 
-  <footer class="thankyou-footer">
-    <p>&copy; 2026 Mantra Properties. All Rights Reserved.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./" class="logo footer-logo">
+            <img src="assets/logo.png" alt="Mantra Properties Logo" class="logo-image" />
+          </a>
+          <p class="brand-tagline">Providing quality luxury developments across Pune with unmatched architectural integrity and absolute commitment to deadlines.</p>
+          <div style="margin-top: 15px; display: flex; align-items: center; gap: 8px;">
+            <a href="tel:7387522292" class="footer-phone-link" aria-label="Call 7387522292">
+              <span class="footer-phone-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              </span>
+              <span>+91 73875 22292</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>OUR PROJECTS</h4>
+          <ul>
+            <li><a href="./#about">Mantra Melange (Kharadi)</a></li>
+            <li><a href="./#projects">Mantra Magnus (Mundhwa)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-rera">
+          <h4>MAHARERA REGISTRATION</h4>
+          <div class="rera-content-wrapper">
+            <!-- Mantra Melange RERA -->
+            <div class="rera-item">
+              <img src="assets/melange_rera_qr.webp" alt="Mantra Melange MahaRERA QR Code" class="footer-rera-qr" loading="lazy" decoding="async" width="110" height="110">
+              <div class="rera-number-box">
+                <span class="rera-label">Mantra Melange RERA:</span>
+                <strong class="rera-no">P52100079582</strong>
+              </div>
+            </div>
+            <!-- Mantra Magnus RERA -->
+            <div class="rera-item">
+              <img src="assets/magnus_rera_qr.webp" alt="Mantra Magnus MahaRERA QR Code" class="footer-rera-qr" loading="lazy" decoding="async" width="110" height="110">
+              <div class="rera-number-box">
+                <span class="rera-label">Mantra Magnus RERA:</span>
+                <strong class="rera-no">P52100078851</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="https://wa.me/917387522292?text=Hello%2C%20I%20am%20interested%20in%20Mantra%20Properties.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" class="footer-whatsapp-btn">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+            <path d="M16 0C7.163 0 0 7.163 0 16c0 2.833.738 5.49 2.027 7.8L0 32l8.424-2.01A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z" fill="#25D366"/>
+            <path d="M23.5 19.914c-.313-.156-1.854-.914-2.141-1.018-.287-.104-.496-.156-.705.156-.208.313-.808 1.018-.99 1.227-.183.208-.365.234-.678.078-.313-.156-1.321-.487-2.517-1.553-.93-.83-1.558-1.854-1.74-2.167-.183-.313-.02-.482.137-.637.141-.14.313-.365.469-.547.156-.183.208-.313.313-.521.104-.208.052-.39-.026-.547-.078-.156-.705-1.7-.966-2.327-.254-.612-.513-.529-.705-.539-.183-.009-.39-.011-.599-.011-.208 0-.547.078-.834.39-.287.313-1.094 1.069-1.094 2.607 0 1.538 1.12 3.024 1.276 3.232.156.208 2.206 3.369 5.344 4.724.747.322 1.329.515 1.784.659.749.238 1.431.204 1.97.124.601-.089 1.854-.757 2.115-1.489.261-.731.261-1.357.183-1.489-.078-.13-.287-.208-.6-.365z" fill="#fff"/>
+          </svg>
+          WhatsApp
+        </a>
+        <p>&copy; 2026 Mantra Properties. All Rights Reserved. Designed for representation purposes.</p>
+        <div class="footer-bottom-links">
+          <a href="./#terms">Terms &amp; Conditions</a>
+          <span class="separator">|</span>
+          <a href="./#privacy">Privacy Policy</a>
+        </div>
+        <p class="rera-disclaimer">Disclaimer: All projects listed are registered under MahaRERA. Registration Numbers: Mantra Melange - P52100079582, Mantra Magnus - P52100078851. For official verification, visit <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">MahaRERA Website</a>.</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Floating Action Buttons (bottom-right) -->
+  <div class="float-actions">
+    <a href="tel:7387522292" class="call-float" aria-label="Call 7387522292">
+      <div class="call-icon-wrapper">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      </div>
+    </a>
+
+    <a href="https://wa.me/917387522292?text=Hello%2C%20I%20am%20interested%20in%20Mantra%20Melange.%20Please%20share%20more%20details."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp">
+      <div class="whatsapp-icon-wrapper">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <path d="M16 0C7.163 0 0 7.163 0 16c0 2.833.738 5.49 2.027 7.8L0 32l8.424-2.01A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z" fill="#fff"/>
+          <path d="M23.5 19.914c-.313-.156-1.854-.914-2.141-1.018-.287-.104-.496-.156-.705.156-.208.313-.808 1.018-.99 1.227-.183.208-.365.234-.678.078-.313-.156-1.321-.487-2.517-1.553-.93-.83-1.558-1.854-1.74-2.167-.183-.313-.02-.482.137-.637.141-.14.313-.365.469-.547.156-.183.208-.313.313-.521.104-.208.052-.39-.026-.547-.078-.156-.705-1.7-.966-2.327-.254-.612-.513-.529-.705-.539-.183-.009-.39-.011-.599-.011-.208 0-.547.078-.834.39-.287.313-1.094 1.069-1.094 2.607 0 1.538 1.12 3.024 1.276 3.232.156.208 2.206 3.369 5.344 4.724.747.322 1.329.515 1.784.659.749.238 1.431.204 1.97.124.601-.089 1.854-.757 2.115-1.489.261-.731.261-1.357.183-1.489-.078-.13-.287-.208-.6-.365z" fill="#25D366"/>
+        </svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- JS Scripts to support header/drawer navigation and populate form details dynamically -->
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Fetch details from sessionStorage
+      const name = sessionStorage.getItem('leadName');
+      const phone = sessionStorage.getItem('leadPhone');
+      const email = sessionStorage.getItem('leadEmail');
+
+      // Populate elements if the values exist in sessionStorage, otherwise keep default mockup data
+      if (name) document.getElementById('displayFullName').textContent = name;
+      if (phone) document.getElementById('displayPhone').textContent = phone;
+      if (email) document.getElementById('displayEmail').textContent = email;
+    });
+  </script>
 </body>
 </html>

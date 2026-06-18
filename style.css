@@ -2673,6 +2673,28 @@ section {
     transform: scale(1.05);
   }
 
+  .footer-phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: var(--transition-fast);
+  }
+
+  .footer-phone-link:hover {
+    color: var(--accent-gold);
+  }
+
+  .footer-phone-link:hover .footer-phone-btn {
+    background-color: var(--accent-gold);
+    color: #1a1b1e;
+    border-color: var(--accent-gold);
+    transform: scale(1.05);
+  }
+
   .footer-links {
     display: flex;
     flex-direction: column;
