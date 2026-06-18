@@ -1,5 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Inline input error helper
+  function showInputError(inputEl, message) {
+    if (!inputEl) return;
+    inputEl.style.borderColor = '#e05252';
+    
+    let errorEl = inputEl.nextElementSibling;
+    if (!errorEl || !errorEl.classList.contains('error-msg')) {
+      errorEl = document.createElement('span');
+      errorEl.className = 'error-msg';
+      errorEl.style.color = '#e05252';
+      errorEl.style.fontSize = '11px';
+      errorEl.style.marginTop = '4px';
+      errorEl.style.display = 'block';
+      errorEl.style.textAlign = 'left';
+      errorEl.style.width = '100%';
+      inputEl.after(errorEl);
+    }
+    errorEl.textContent = message;
+
+    // Remove error on input
+    inputEl.addEventListener('input', () => {
+      inputEl.style.borderColor = '';
+      if (errorEl) errorEl.remove();
+    }, { once: true });
+  }
+
   /* ==========================================
      1. Sticky Header Scroll Effect
      ========================================== */
@@ -332,10 +358,40 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('clientEmail').value.trim();
       const project = document.getElementById('preferredProject').value;
 
+      const nameInput = document.getElementById('clientName');
+      const phoneInput = document.getElementById('clientPhone');
+      const emailInput = document.getElementById('clientEmail');
+
       if (!name || !phone || !email || !project) {
-        alert('Please fill out all required fields.');
+        if (nameInput && !name) showInputError(nameInput, "This field is required.");
+        if (phoneInput && !phone) showInputError(phoneInput, "This field is required.");
+        if (emailInput && !email) showInputError(emailInput, "This field is required.");
         return;
       }
+
+      // Format validations
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[0-9]{10}$/;
+      const nameRegex = /^[^0-9]+$/;
+
+      let isValidFormat = true;
+
+      if (nameInput && !nameRegex.test(name)) {
+        isValidFormat = false;
+        showInputError(nameInput, "Name should not contain numbers.");
+      }
+
+      if (phoneInput && !phoneRegex.test(phone)) {
+        isValidFormat = false;
+        showInputError(phoneInput, "Phone number must be exactly 10 digits.");
+      }
+
+      if (emailInput && !emailRegex.test(email)) {
+        isValidFormat = false;
+        showInputError(emailInput, "Please enter a valid email address.");
+      }
+
+      if (!isValidFormat) return;
 
       // Show loader simulation
       btnSubmitEnquiry.disabled = true;
@@ -615,16 +671,40 @@ document.addEventListener('DOMContentLoaded', () => {
       const name  = document.getElementById('epfName')?.value.trim();
       const phone = document.getElementById('epfPhone')?.value.trim();
       const email = document.getElementById('epfEmail')?.value.trim();
+      const nameInput = document.getElementById('epfName');
+      const phoneInput = document.getElementById('epfPhone');
+      const emailInput = document.getElementById('epfEmail');
+
       if (!name || !phone || !email) {
-        // Highlight missing fields
-        [document.getElementById('epfName'), document.getElementById('epfPhone'), document.getElementById('epfEmail')].forEach(el => {
-          if (el && !el.value.trim()) {
-            el.style.borderColor = '#e05252';
-            el.addEventListener('input', () => { el.style.borderColor = ''; }, { once: true });
-          }
-        });
+        if (nameInput && !name) showInputError(nameInput, "This field is required.");
+        if (phoneInput && !phone) showInputError(phoneInput, "This field is required.");
+        if (emailInput && !email) showInputError(emailInput, "This field is required.");
         return;
       }
+
+      // Format validations
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[0-9]{10}$/;
+      const nameRegex = /^[^0-9]+$/;
+
+      let isValidFormat = true;
+
+      if (nameInput && !nameRegex.test(name)) {
+        isValidFormat = false;
+        showInputError(nameInput, "Name should not contain numbers.");
+      }
+
+      if (phoneInput && !phoneRegex.test(phone)) {
+        isValidFormat = false;
+        showInputError(phoneInput, "Phone number must be exactly 10 digits.");
+      }
+
+      if (emailInput && !emailRegex.test(email)) {
+        isValidFormat = false;
+        showInputError(emailInput, "Please enter a valid email address.");
+      }
+
+      if (!isValidFormat) return;
 
       // Show sending state
       const btnSubmit = document.getElementById('btnEpfSubmit');
@@ -739,24 +819,50 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       // Basic validation
+      const nameInput = overlapEnquiryForm.querySelector('input[type="text"]');
+      const emailInput = overlapEnquiryForm.querySelector('input[type="email"]');
+      const phoneInput = overlapEnquiryForm.querySelector('input[type="tel"]');
       const inputs = overlapEnquiryForm.querySelectorAll('input[required], select[required]');
       let isValid = true;
 
       inputs.forEach(input => {
         if (!input.value.trim()) {
           isValid = false;
-          input.style.borderColor = '#e05252';
-          input.addEventListener('input', () => { input.style.borderColor = ''; }, { once: true });
+          showInputError(input, "This field is required.");
         }
       });
 
       if (!isValid) return;
 
-      const name = overlapEnquiryForm.querySelector('input[type="text"]')?.value.trim();
-      const email = overlapEnquiryForm.querySelector('input[type="email"]')?.value.trim();
-      const phone = overlapEnquiryForm.querySelector('input[type="tel"]')?.value.trim();
+      const name = nameInput?.value.trim();
+      const email = emailInput?.value.trim();
+      const phone = phoneInput?.value.trim();
       const property = overlapEnquiryForm.querySelector('select')?.value;
       const message = overlapEnquiryForm.querySelector('textarea')?.value.trim();
+
+      // Format validations
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[0-9]{10}$/;
+      const nameRegex = /^[^0-9]+$/;
+
+      let isValidFormat = true;
+
+      if (nameInput && !nameRegex.test(name)) {
+        isValidFormat = false;
+        showInputError(nameInput, "Name should not contain numbers.");
+      }
+
+      if (phoneInput && !phoneRegex.test(phone)) {
+        isValidFormat = false;
+        showInputError(phoneInput, "Phone number must be exactly 10 digits.");
+      }
+
+      if (emailInput && !emailRegex.test(email)) {
+        isValidFormat = false;
+        showInputError(emailInput, "Please enter a valid email address.");
+      }
+
+      if (!isValidFormat) return;
 
       // Show sending state
       const btnSubmit = overlapEnquiryForm.querySelector('button[type="submit"]');
