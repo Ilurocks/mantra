@@ -1,7 +1,13 @@
 RewriteEngine On
 
+# Redirect index.html to the root directory /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+
 # Redirect browser from page.html to page (clean URL redirect)
+# Exclude index.html to avoid conflict with the root redirect above
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html\ HTTP/
+RewriteCond %{REQUEST_URI} !/index\.html$
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
 # Internally map clean URL to the .html file
