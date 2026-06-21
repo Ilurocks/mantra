@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sessionStorage.setItem('leadPhone', phone);
       sessionStorage.setItem('leadEmail', email);
 
-      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+      fetch('https://formsubmit.co/ajax/ritam.propmarine@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -727,7 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sessionStorage.setItem('leadPhone', phone);
       sessionStorage.setItem('leadEmail', email);
 
-      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+      fetch('https://formsubmit.co/ajax/ritam.propmarine@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -887,7 +887,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sessionStorage.setItem('leadPhone', phone);
       sessionStorage.setItem('leadEmail', email);
 
-      fetch('https://formsubmit.co/ajax/saurabhkhandelia@gmail.com', {
+      fetch('https://formsubmit.co/ajax/ritam.propmarine@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

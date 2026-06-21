@@ -3206,15 +3206,26 @@ section {
 
   @media (max-width: 768px) {
     .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 13px;
+    }
+
+    .nav-phone svg {
       display: none;
+    }
+
+    .nav-actions .btn-phone {
+      display: none !important;
     }
 
     .nav-actions .btn-enquire span {
       display: none;
     }
 
-    .nav-actions .btn-enquire,
-    .nav-actions .btn-phone {
+    .nav-actions .btn-enquire {
       width: 40px;
       height: 40px;
       padding: 0;
@@ -3227,8 +3238,7 @@ section {
       color: var(--text-white);
     }
 
-    .nav-actions .btn-enquire svg,
-    .nav-actions .btn-phone svg {
+    .nav-actions .btn-enquire svg {
       width: 20px;
       height: 20px;
     }
