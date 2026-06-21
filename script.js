@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroDetailsTop) heroDetailsTop.innerHTML = d.detailsTop || '';
     if (heroDetailsTitle) heroDetailsTitle.textContent = d.detailsTitle || '';
     if (heroDetailsStatus) heroDetailsStatus.textContent = d.detailsStatus || '';
-    if (heroWhatsappBtn) heroWhatsappBtn.href = d.whatsapp || 'https://wa.me/917387522292';
+    if (heroWhatsappBtn) heroWhatsappBtn.href = d.whatsapp || 'https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0';
   }
 
   if (heroBgs.length > 0) {
@@ -902,7 +902,7 @@ document.addEventListener('DOMContentLoaded', () => {
 - Email: ${email}
 - Phone: ${phone}
 ${message ? `- Message: ${message}` : ''}`;
-        const waUrl = `https://wa.me/917387522292?text=${encodeURIComponent(textMsg)}`;
+        const waUrl = `https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0`;
         
         // Open WhatsApp in new tab
         window.open(waUrl, '_blank');
@@ -918,7 +918,7 @@ ${message ? `- Message: ${message}` : ''}`;
 - Email: ${email}
 - Phone: ${phone}
 ${message ? `- Message: ${message}` : ''}`;
-        const waUrl = `https://wa.me/917387522292?text=${encodeURIComponent(textMsg)}`;
+        const waUrl = `https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0`;
         window.open(waUrl, '_blank');
         window.location.href = 'thank-you.html';
       })
