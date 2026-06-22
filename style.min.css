@@ -194,6 +194,7 @@ button {
 /* Logo styling */
 .logo {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .logo-wrapper {
@@ -215,6 +216,30 @@ button {
   text-transform: uppercase;
   color: var(--text-white);
   margin-top: -3px;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: var(--transition-smooth);
+}
+
+.header.scrolled .logo-image {
+  height: 40px;
+}
+
+.footer-logo .logo-image {
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 38px;
+  }
+  .header.scrolled .logo-image {
+    height: 32px;
+  }
 }
 
 /* Nav Menu (Left-aligned next to Logo) */
@@ -461,6 +486,31 @@ button {
 
 .btn-mega-arrow:hover svg {
   transform: translateX(4px);
+}
+
+/* Nav Phone Number */
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-white);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+  padding-right: 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.nav-phone:hover {
+  opacity: 1;
+}
+.nav-phone svg {
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 /* Right-side actions styling */
@@ -2261,10 +2311,28 @@ section {
   padding: 12px 28px;
   border-radius: 4px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
 
-.btn-location-gold:hover {
+.btn-get-location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-gold);
+  color: #1a1b1e !important;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(207, 167, 57, 0.2);
+}
+
+.btn-get-location:hover {
   background-color: #e0a830;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(207, 167, 57, 0.35);
@@ -2516,9 +2584,10 @@ section {
 
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     margin-bottom: 60px;
+    align-items: start;
   }
 
   .footer-brand {
@@ -2583,12 +2652,72 @@ section {
     background-color: rgba(197, 168, 128, 0.05);
   }
 
-  .footer-links h4,
+  .footer-phone-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: transparent;
+    color: var(--accent-gold);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .footer-phone-btn:hover {
+    background-color: var(--accent-gold);
+    color: #1a1b1e;
+    border-color: var(--accent-gold);
+    transform: scale(1.05);
+  }
+
+  .footer-phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: var(--transition-fast);
+  }
+
+  .footer-phone-link:hover {
+    color: var(--accent-gold);
+  }
+
+  .footer-phone-link:hover .footer-phone-btn {
+    background-color: var(--accent-gold);
+    color: #1a1b1e;
+    border-color: var(--accent-gold);
+    transform: scale(1.05);
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-white);
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+
   .footer-rera h4 {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--text-white);
+    margin-top: 0;
     margin-bottom: 25px;
     text-transform: uppercase;
   }
@@ -2603,16 +2732,18 @@ section {
     font-size: 13px;
     color: var(--text-muted);
     transition: var(--transition-fast);
+    display: inline-block;
   }
 
   .footer-links ul a:hover {
     color: var(--accent-gold);
-    padding-left: 5px;
+    transform: translateY(-1px);
   }
 
   .footer-rera {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
   }
 
   .rera-content-wrapper {
@@ -2624,8 +2755,9 @@ section {
 
   .rera-item {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
     min-width: 140px;
   }
 
@@ -2673,6 +2805,20 @@ section {
     align-items: center;
     gap: 15px;
     text-align: center;
+  }
+
+  .footer-bottom p,
+  .footer-bottom-links,
+  .footer-bottom .rera-disclaimer {
+    align-self: center;
+  }
+
+  .footer-bottom .footer-whatsapp-btn {
+    align-self: center;
+  }
+
+  .footer-bottom .rera-disclaimer {
+    padding-bottom: 90px;
   }
 
   .footer-bottom p {
@@ -2995,6 +3141,10 @@ section {
       gap: 40px;
     }
 
+    .footer-links {
+      padding-top: 25px;
+    }
+
     .footer-rera {
       grid-column: span 2;
       align-items: center;
@@ -3055,12 +3205,27 @@ section {
   }
 
   @media (max-width: 768px) {
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 13px;
+    }
+
+    .nav-phone svg {
+      display: none;
+    }
+
+    .nav-actions .btn-phone {
+      display: none !important;
+    }
+
     .nav-actions .btn-enquire span {
       display: none;
     }
 
-    .nav-actions .btn-enquire,
-    .nav-actions .btn-phone {
+    .nav-actions .btn-enquire {
       width: 40px;
       height: 40px;
       padding: 0;
@@ -3073,8 +3238,7 @@ section {
       color: var(--text-white);
     }
 
-    .nav-actions .btn-enquire svg,
-    .nav-actions .btn-phone svg {
+    .nav-actions .btn-enquire svg {
       width: 20px;
       height: 20px;
     }
@@ -3219,6 +3383,7 @@ section {
     }
 
     .rera-item {
+      flex-direction: column;
       align-items: center;
       text-align: center;
     }
@@ -3228,14 +3393,29 @@ section {
       font-size: 11px;
     }
 
-    .whatsapp-float {
+    .float-actions {
       bottom: 18px;
       right: 18px;
     }
-
-    .whatsapp-icon-wrapper {
-      width: 50px;
+    .call-float {
       height: 50px;
+      padding: 0 14px 0 5px;
+    }
+    .call-icon-wrapper {
+      width: 38px;
+      height: 38px;
+    }
+
+    .whatsapp-float {
+      height: 50px;
+      padding: 0 12px 0 5px;
+    }
+    .whatsapp-icon-wrapper {
+      width: 38px;
+      height: 38px;
+    }
+    .whatsapp-label {
+      font-size: 0.75rem;
     }
   }
 
@@ -3375,31 +3555,82 @@ section {
     }
   }
 
-  /* --- Floating WhatsApp Button --- */
-  .whatsapp-float {
+  /* --- Floating Action Buttons Container --- */
+  .float-actions {
     position: fixed;
     bottom: 28px;
     right: 28px;
     z-index: 9000;
     display: flex;
     align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    cursor: pointer;
+    gap: 12px;
   }
 
-  .whatsapp-icon-wrapper {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background-color: #25D366;
+  /* --- Floating Call Button --- */
+  .call-float {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
-    position: relative;
+    background: #1a1c1f;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .call-float:hover {
+    box-shadow: 0 8px 28px rgba(0,0,0,0.55);
+    transform: translateY(-2px);
+  }
+  .call-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #c8a96e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+  }
+  .call-icon-wrapper svg {
+    color: #fff;
+  }
+  .call-label {
+    display: none;
+  }
+
+  /* --- Floating WhatsApp Button --- */
+  .whatsapp-float {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .whatsapp-float:hover {
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .whatsapp-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #128C54;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
   }
 
   /* Pulse ring animation */
@@ -3409,82 +3640,59 @@ section {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: rgba(37, 211, 102, 0.35);
+    background-color: rgba(37, 211, 102, 0.45);
     animation: whatsappPulse 2.2s ease-out infinite;
   }
 
   @keyframes whatsappPulse {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-
-    70% {
-      transform: scale(1.6);
-      opacity: 0;
-    }
-
-    100% {
-      transform: scale(1.6);
-      opacity: 0;
-    }
+    0%   { transform: scale(1); opacity: 1; }
+    70%  { transform: scale(1.7); opacity: 0; }
+    100% { transform: scale(1.7); opacity: 0; }
   }
 
   .whatsapp-icon-wrapper svg {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     position: relative;
     z-index: 1;
   }
 
-  .whatsapp-float:hover .whatsapp-icon-wrapper {
-    transform: scale(1.1) translateY(-3px);
-    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
-  }
-
-  /* Tooltip label */
-  .whatsapp-tooltip {
-    background-color: #1a1c1f;
-    color: #ffffff;
-    font-family: var(--font-sans);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    padding: 7px 14px;
-    border-radius: 6px;
+  .whatsapp-label {
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
     white-space: nowrap;
-    opacity: 0;
-    transform: translateX(8px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    pointer-events: none;
-    order: -1;
-    /* Shows to the LEFT of icon */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .whatsapp-float:hover .whatsapp-tooltip {
-    opacity: 1;
-    transform: translateX(0);
   }
 
   @media (max-width: 768px) {
-    .whatsapp-float {
+    .float-actions {
       bottom: 20px;
       right: 16px;
     }
-
+    .call-float {
+      width: 50px;
+      height: 50px;
+      padding: 0;
+    }
+    .call-icon-wrapper {
+      width: 38px;
+      height: 38px;
+    }
+    .call-label {
+      display: none;
+    }
+    .whatsapp-float {
+      width: 50px;
+      height: 50px;
+      padding: 0;
+    }
     .whatsapp-icon-wrapper {
-      width: 52px;
-      height: 52px;
+      width: 38px;
+      height: 38px;
     }
-
-    .whatsapp-icon-wrapper svg {
-      width: 28px;
-      height: 28px;
-    }
-
-    .whatsapp-tooltip {
+    .whatsapp-label {
       display: none;
     }
   }
