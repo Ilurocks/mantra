@@ -408,19 +408,18 @@
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  Tawk_API.customStyle = {
-      visibility : {
-          desktop : {
-              position : 'bottom-left',
-              xOffset : '20px',
-              yOffset : '20px'
-          },
-          mobile : {
-              position : 'bottom-left',
-              xOffset : '15px',
-              yOffset : '15px'
-          }
-      }
+  // Force bottom-left position via CSS override on widget load
+  Tawk_API.onLoad = function() {
+    var style = document.createElement('style');
+    style.innerHTML = [
+      '#tawk-bubble-container { left: 20px !important; right: auto !important; }',
+      '.tawk-min-container { left: 20px !important; right: auto !important; }',
+      '.tawk-button-container { left: 20px !important; right: auto !important; }',
+      '#tawkchat-minified-box { left: 20px !important; right: auto !important; }',
+      'iframe[title="chat widget"] { left: 20px !important; right: auto !important; }',
+      'div[data-id="tawk-bubble"] { left: 20px !important; right: auto !important; }'
+    ].join('');
+    document.head.appendChild(style);
   };
   (function(){
   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
