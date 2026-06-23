@@ -24,7 +24,7 @@
   <meta name="description" content="Explore Mantra Properties' premium residential projects in Pune: Mantra Melange (Kharadi) and Mantra Magnus (Mundhwa). Discover smart luxury homes with modern amenities.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="shortcut icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css?v=1.0.2">
+  <link rel="stylesheet" href="style.css?v=1.0.3">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -1924,18 +1924,19 @@
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  // Force bottom-left position via CSS override on widget load
-  Tawk_API.onLoad = function() {
-    var style = document.createElement('style');
-    style.innerHTML = [
-      '#tawk-bubble-container { left: 20px !important; right: auto !important; }',
-      '.tawk-min-container { left: 20px !important; right: auto !important; }',
-      '.tawk-button-container { left: 20px !important; right: auto !important; }',
-      '#tawkchat-minified-box { left: 20px !important; right: auto !important; }',
-      'iframe[title="chat widget"] { left: 20px !important; right: auto !important; }',
-      'div[data-id="tawk-bubble"] { left: 20px !important; right: auto !important; }'
-    ].join('');
-    document.head.appendChild(style);
+  Tawk_API.customStyle = {
+      visibility : {
+          desktop : {
+              position : 'bl',
+              xOffset : 20,
+              yOffset : 20
+          },
+          mobile : {
+              position : 'bl',
+              xOffset : 15,
+              yOffset : 80
+          }
+      }
   };
   (function(){
   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];

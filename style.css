@@ -5945,3 +5945,13 @@ section {
     font-size: 20px;
   }
 }
+
+/* Force Tawk.to Widget to Bottom-Left on Mobile and shift up to avoid overlapping footer actions */
+@media (max-width: 768px) {
+  iframe[src*="tawk.to"],
+  iframe[title="chat widget"] {
+    left: 10px !important;
+    right: auto !important;
+    bottom: 80px !important;
+  }
+}
