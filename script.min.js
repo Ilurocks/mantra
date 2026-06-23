@@ -26,6 +26,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
   }
 
+  // Google Sheets Web App URL and lead submission handler
+  const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyFVniPXjOfGBMlGnS-toRlIy_dvM48rXw8TOmsUxJc14TnfJ-yIp9_VUWURcrcap88ZA/exec';
+
+  function submitLeadData(formData) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmSource = urlParams.get('utm_source') || '';
+    const utmMedium = urlParams.get('utm_medium') || '';
+    const utmCampaign = urlParams.get('utm_campaign') || '';
+    const leadSource = 'Website';
+
+    const sheetData = {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      project: formData.project,
+      source: leadSource,
+      utm_source: utmSource,
+      utm_medium: utmMedium,
+      utm_campaign: utmCampaign
+    };
+
+    const emailPromise = fetch('https://formsubmit.co/ajax/ritam.propmarine@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const sheetPromise = fetch(GOOGLE_SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(sheetData)
+    });
+
+    return Promise.allSettled([emailPromise, sheetPromise]);
+  }
+
   /* ==========================================
      1. Sticky Header Scroll Effect
      ========================================== */
@@ -413,19 +455,12 @@ document.addEventListener('DOMContentLoaded', () => {
       sessionStorage.setItem('leadPhone', phone);
       sessionStorage.setItem('leadEmail', email);
 
-      fetch('https://formsubmit.co/ajax/ritam.propmarine@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
+      submitLeadData(formData)
       .then(() => {
         window.location.href = 'thank-you.html';
       })
       .catch((err) => {
-        console.error('Email send failed:', err);
+        console.error('Lead submission failed:', err);
         window.location.href = 'thank-you.html';
       })
       .finally(() => {
@@ -727,20 +762,12 @@ document.addEventListener('DOMContentLoaded', () => {
       sessionStorage.setItem('leadPhone', phone);
       sessionStorage.setItem('leadEmail', email);
 
-      fetch('https://formsubmit.co/ajax/ritam.propmarine@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
+      submitLeadData(formData)
       .then(() => {
         window.location.href = 'thank-you.html';
       })
       .catch((err) => {
-        console.error('Email send failed:', err);
-        // Fallback: still redirect to thank you page
+        console.error('Lead submission failed:', err);
         window.location.href = 'thank-you.html';
       });
     });
@@ -887,37 +914,14 @@ document.addEventListener('DOMContentLoaded', () => {
       sessionStorage.setItem('leadPhone', phone);
       sessionStorage.setItem('leadEmail', email);
 
-      fetch('https://formsubmit.co/ajax/ritam.propmarine@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
+      submitLeadData(formData)
       .then(() => {
-        // Construct WhatsApp URL
-        const textMsg = `Hello, I am interested in ${selectedProp}. Here are my details:
-- Name: ${name}
-- Email: ${email}
-- Phone: ${phone}
-${message ? `- Message: ${message}` : ''}`;
         const waUrl = `https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0`;
-        
-        // Open WhatsApp in new tab
         window.open(waUrl, '_blank');
-        
-        // Redirect current tab to Thank You page
         window.location.href = 'thank-you.html';
       })
       .catch((err) => {
-        console.error('Email send failed:', err);
-        // Fallback: still open WhatsApp and redirect
-        const textMsg = `Hello, I am interested in ${selectedProp}. Here are my details:
-- Name: ${name}
-- Email: ${email}
-- Phone: ${phone}
-${message ? `- Message: ${message}` : ''}`;
+        console.error('Lead submission failed:', err);
         const waUrl = `https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0`;
         window.open(waUrl, '_blank');
         window.location.href = 'thank-you.html';
