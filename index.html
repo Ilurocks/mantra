@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-M36Z3D9C');</script>
+  <script>
+  (function(){
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M36Z3D9C');
+    }
+    var events = ['mouseover', 'keydown', 'touchmove', 'touchstart', 'scroll'];
+    events.forEach(function(e) {
+      window.addEventListener(e, loadGTM, {once: true, passive: true});
+    });
+    setTimeout(loadGTM, 3500);
+  })();
+  </script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +31,11 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"></noscript>
   <link rel="preload" as="image" href="assets/mantra_melange_mobile.webp" media="(max-width: 767px)" fetchpriority="high">
   <link rel="preload" as="image" href="assets/mantra_melange.webp" media="(min-width: 768px)" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/Aerial_Cam_mobile.webp" media="(max-width: 767px)">
-  <link rel="preload" as="image" href="assets/Aerial_Cam.webp" media="(min-width: 768px)">
-  
+
   <meta name="description" content="Explore Mantra Properties' premium residential projects in Pune: Mantra Melange (Kharadi) and Mantra Magnus (Mundhwa). Discover smart luxury homes with modern amenities.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="shortcut icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css?v=1.0.3">
+  <link rel="stylesheet" href="style.min.css?v=1.0.3">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -81,6 +92,15 @@
                   <p class="mega-card-subtitle">Mundhwa <span>•</span> Ongoing Project</p>
                 </a>
 
+                <!-- Card 3 -->
+                <a href="#" class="mega-card" data-filter="residential" data-hero-index="2">
+                  <div class="mega-card-img-wrapper">
+                    <img src="assets/mayfair_river.webp" alt="Mayfair River Residences" loading="lazy" decoding="async" width="280" height="180">
+                  </div>
+                  <h4 class="mega-card-title">Mayfair River Residences</h4>
+                  <p class="mega-card-subtitle">Koregaon Park Annex <span>•</span> New Launch</p>
+                </a>
+
 
               </div>
             </div>
@@ -134,6 +154,7 @@
         <div class="drawer-submenu">
           <a href="#" class="drawer-sublink" data-filter="residential" data-hero-index="0">Mantra Melange</a>
           <a href="#" class="drawer-sublink" data-filter="residential" data-hero-index="1">Mantra Magnus</a>
+          <a href="#" class="drawer-sublink" data-filter="residential" data-hero-index="2">Mayfair River Residences</a>
         </div>
       </li>
 
@@ -172,6 +193,17 @@
       data-scroll="#enquire"
       data-whatsapp="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0">
     </div>
+    <div class="hero-bg hero-bg-mayfair"
+      data-title="Mayfair River Residences"
+      data-brand-main="MAYFAIR"
+      data-brand-sub="KOREGAON PARK ANNEX"
+      data-details-top="3 &amp; 4 BHK Luxury Residences at Koregaon Park Annex"
+      data-details-title="Koregaon Park Annex, Pune • From ₹2.20 Cr*"
+      data-details-status="New Launch"
+      data-enquire="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mayfair+River+Residences.+Please+share+more+details.&type=phone_number&app_absent=0"
+      data-scroll="#enquire"
+      data-whatsapp="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mayfair+River+Residences.+Please+share+more+details.&type=phone_number&app_absent=0">
+    </div>
 
 
     <div class="hero-center-content">
@@ -192,6 +224,7 @@
               <span class="brand-sub" id="heroBrandSub">KHARADI RIVERSIDE</span>
             </div>
             <button class="hero-tab-btn" data-index="1" aria-label="Mantra Magnus"><span class="hide-mobile">Mantra </span>Magnus</button>
+            <button class="hero-tab-btn" data-index="2" aria-label="Mayfair River Residences"><span class="hide-mobile">Mayfair </span>River</button>
           </div>
           <div class="project-details">
             <p class="details-top" id="heroDetailsTop">2 &amp; 3 BHK Homes at Kharadi</p>
@@ -221,6 +254,7 @@
     <div class="hero-dots" id="heroDots">
       <span class="hero-dot active" data-index="0" role="button" aria-label="Go to slide 1"></span>
       <span class="hero-dot" data-index="1" role="button" aria-label="Go to slide 2"></span>
+      <span class="hero-dot" data-index="2" role="button" aria-label="Go to slide 3"></span>
     </div>
 
 
@@ -330,6 +364,57 @@
 
   </section>
 
+  <!-- Mayfair River Residences About Section -->
+  <section id="mayfair-about" class="about mayfair-about">
+    <!-- Full-Width Background Watermark Lines crossing behind the image -->
+    <div class="about-watermark" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Swooshes on the left -->
+        <path d="M-100 420 C180 320, 320 280, 520 380 C380 260, 220 220, -50 300" stroke="rgba(0,0,0,0.035)" stroke-width="1.5"/>
+        <path d="M-50 450 C230 350, 370 310, 570 410 C430 290, 270 250, 0 330" stroke="rgba(0,0,0,0.02)" stroke-width="1.5"/>
+        
+        <!-- Large Swooshes crossing behind the image -->
+        <path d="M420 540 C720 340, 1050 140, 1500 90 C1250 120, 900 220, 580 440" stroke="rgba(0,0,0,0.035)" stroke-width="1.5"/>
+        <path d="M470 570 C770 370, 1100 170, 1550 120 C1300 150, 950 250, 630 470" stroke="rgba(0,0,0,0.02)" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <div class="about-container">
+      <div class="about-grid">
+        <!-- Content on Left -->
+        <div class="about-info">
+          <span class="section-tag-dark">MAYFAIR RIVER RESIDENCES</span>
+          <h2 class="section-title-dark">MAYFAIR RIVER RESIDENCES – KP ANNEX</h2>
+          <h3 class="section-subtitle-spec">3 &amp; 4 BHK LUXURY HOMES IN PUNE</h3>
+          <h4 class="section-price-spec">PRICE ₹2.20 CR* – ₹2.80 CR*</h4>
+          
+          <p class="about-text-dark"><strong>We’re excited to announce the launch of 3 new luxury towers at Mayfair River Residences, Koregaon Park Annex, Pune.</strong> This exclusive gated community on a 2.5-acre land parcel features iconic towers with premium 3 &amp; 4 BHK residences with rooftop luxury amenities, elegant layouts, and select units offering river-facing views.</p>
+          <p class="about-text-dark">Perfect for luxury buyers &amp; investors seeking premium specifications, modern lifestyle amenities, and excellent connectivity to schools, malls, the airport &amp; IT hubs.</p>
+          
+          <!-- Download Brochure Action -->
+          <div class="about-actions">
+            <a href="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mayfair+River+Residences.+Please+share+more+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn-about-action btn-gold">
+              <span>DOWNLOAD BROCHURE</span>
+              <svg class="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image on Right -->
+        <div class="about-visuals">
+          <div class="lifestyle-img-wrapper">
+            <img src="assets/mayfair_about.webp" alt="Mayfair River Residences Facade" class="lifestyle-img" loading="lazy" decoding="async" width="580" height="400">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
   <!-- Project Highlights Section -->
   <section id="project-highlights" class="highlights-section">
     <div class="highlights-container">
@@ -343,6 +428,7 @@
       <div class="highlights-tabs">
         <button class="highlight-tab-btn active" data-target="highlight-melange">Mantra Melange</button>
         <button class="highlight-tab-btn" data-target="highlight-magnus">Mantra Magnus</button>
+        <button class="highlight-tab-btn" data-target="highlight-mayfair">Mayfair River Residences</button>
       </div>
 
       <!-- Tab Content wrapper -->
@@ -448,6 +534,61 @@
           </div>
         </div>
 
+        <!-- Tab 3 Content: Mayfair River Residences -->
+        <div class="highlight-pane" id="highlight-mayfair">
+          <div class="highlight-grid">
+            
+            <!-- Card 1: Prime Location -->
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Koregaon Park Annex Location</h3>
+              <p class="highlight-card-text">Prime location near Koregaon Park & Kalyani Nagar, offering excellent connectivity to schools, malls, the airport, and prominent IT hubs.</p>
+            </div>
+            
+            <!-- Card 2: Exclusive Gated Community -->
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="3" y1="15" x2="21" y2="15"></line>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">2.5-Acre Gated Community</h3>
+              <p class="highlight-card-text">3 Iconic Towers featuring premium 3 & 4 BHK residences with elegant layouts, rooftop luxury amenities, and river-facing views for select units.</p>
+            </div>
+
+            <!-- Card 3: High-end Specifications -->
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">High-End Specifications</h3>
+              <p class="highlight-card-text">Built to elite architectural standards, featuring premium specifications, modern layout optimizations, and gorgeous river views.</p>
+            </div>
+
+            <!-- Card 4: Limited Inventory -->
+            <div class="highlight-card">
+              <div class="highlight-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="highlight-card-title">Perfect for Investors</h3>
+              <p class="highlight-card-text">A rare launch with highly limited inventory, making it the perfect opportunity for both premium home buyers and luxury real estate investors.</p>
+            </div>
+            
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -467,6 +608,7 @@
       <div class="plans-level1-tabs">
         <button class="level1-tab-btn active" data-target="plan-melange">Mantra Melange</button>
         <button class="level1-tab-btn" data-target="plan-magnus">Mantra Magnus</button>
+        <button class="level1-tab-btn" data-target="plan-mayfair">Mayfair River Residences</button>
       </div>
 
       <!-- Plans Content Wrapper -->
@@ -636,6 +778,88 @@
           </div>
         </div>
 
+        <!-- Mayfair Content Pane -->
+        <div class="plans-pane" id="plan-mayfair">
+          <!-- Level 2 Tabs (Sub-tabs for Mayfair) -->
+          <div class="plans-level2-tabs">
+            <button class="level2-tab-btn active" data-target="mayfair-elevation">Elevations</button>
+            <button class="level2-tab-btn" data-target="mayfair-master">Master Plan</button>
+          </div>
+
+          <!-- Sub-tab Content Panes for Mayfair -->
+          <div class="sub-plans-wrapper">
+            
+            <!-- Mayfair Elevation Pane -->
+            <div class="sub-plans-pane active" id="mayfair-elevation">
+              <div class="plan-display-card" style="max-width: 1100px;">
+                <div class="elevation-grid-container">
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/mayfair_river.webp" alt="Panoramic Riverside Towers &amp; Landscape" decoding="async" width="340" height="191">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Luxury Riverfront Towers</h4>
+                      <p>Sophisticated 3 iconic towers next to a beautiful riverfront, featuring modern aesthetics</p>
+                    </div>
+                  </div>
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/mayfair_river.webp" alt="Tower Facade &amp; Elevation" decoding="async" width="340" height="453">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Elegant Glass Facade</h4>
+                      <p>Close-up view highlighting the premium specifications and glass balcony layouts</p>
+                    </div>
+                  </div>
+                  
+                  <div class="elevation-grid-item">
+                    <div class="plan-img-wrapper">
+                      <img src="assets/mayfair_river.webp" alt="Grand Entry Gated Archway" decoding="async" width="340" height="191">
+                    </div>
+                    <div class="elevation-item-caption">
+                      <h4>Grand Gated Drop-off</h4>
+                      <p>Panoramic dusk view of the premium entrance drop-off zone and pathways</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Mayfair Master Plan Pane -->
+            <div class="sub-plans-pane" id="mayfair-master">
+              <div class="plan-display-card">
+                <div class="plan-img-wrapper">
+                  <img src="assets/mayfair_master_plan.webp" alt="Mayfair River Residences Master Plan Layout" decoding="async" width="660" height="750">
+                </div>
+                <div class="plan-legend-panel">
+                  <h4 class="legend-header">AMENITIES &amp; KEY LOCATIONS:</h4>
+                  <div class="legend-grid">
+                    <div class="legend-col">
+                      <span>01. Rooftop Infinity Pool</span>
+                      <span>02. Sky Lounge Cafe</span>
+                      <span>03. Roof Observation Deck</span>
+                    </div>
+                    <div class="legend-col">
+                      <span>04. Kids Play Park</span>
+                      <span>05. Modern Gymnasium</span>
+                      <span>06. Landscaped Pathways</span>
+                    </div>
+                    <div class="legend-col">
+                      <span>07. Gated Security Cabins</span>
+                      <span>08. Zen Meditation Area</span>
+                      <span>09. Tower Canopy Drop-off</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -650,6 +874,7 @@
       <div class="amenities-property-tabs">
         <button class="amenities-tab-btn active" data-target="amenities-melange">Mantra Melange</button>
         <button class="amenities-tab-btn" data-target="amenities-magnus">Mantra Magnus</button>
+        <button class="amenities-tab-btn" data-target="amenities-mayfair">Mayfair River Residences</button>
       </div>
 
       <!-- Tab Contents -->
@@ -833,6 +1058,93 @@
           </div>
         </div>
 
+        <!-- Mayfair River Residences Pane -->
+        <div class="amenities-pane" id="amenities-mayfair">
+          <div class="amenities-slider-outer">
+            <div class="amenities-slider-inner" id="slider-mayfair-amenities">
+              
+              <!-- Amenity 1: Rooftop Infinity Pool -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3-3 10-3 10 3 10 3-3 3-10 3-10-3-10-3z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Rooftop Infinity Pool</span>
+              </div>
+
+              <!-- Amenity 2: Rooftop Lounge & Cafe -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Rooftop Lounge &amp; Cafe</span>
+              </div>
+
+              <!-- Amenity 3: Sky Deck & Observatory -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 7"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Sky Deck &amp; Observatory</span>
+              </div>
+
+              <!-- Amenity 4: Kids Play Area -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 22h4M12 2v20M12 2L5 9h14L12 2z"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Kids' Play Zone</span>
+              </div>
+
+              <!-- Amenity 5: Modern Gymnasium -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="2" rx="1"></rect>
+                    <rect x="7" y="5" width="2" height="14" rx="1"></rect>
+                    <rect x="15" y="5" width="2" height="14" rx="1"></rect>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Modern Gymnasium</span>
+              </div>
+
+              <!-- Amenity 6: Rooftop Zen Gardens -->
+              <div class="amenity-slide-item">
+                <div class="amenity-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a15.3 15.3 0 0 1 4 7c0 4.5-4 8-4 8s-4-3.5-4-8a15.3 15.3 0 0 1 4-7z"></path>
+                  </svg>
+                </div>
+                <span class="amenity-item-label">Rooftop Zen Gardens</span>
+              </div>
+
+            </div>
+          </div>
+          
+          <!-- Slider Navigation Arrows -->
+          <div class="amenities-arrows-container">
+            <button class="amenity-arrow-btn prev" id="btn-mayfair-amenities-prev" aria-label="Previous Amenities">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="amenity-arrow-btn next" id="btn-mayfair-amenities-next" aria-label="Next Amenities">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -848,6 +1160,7 @@
       <div class="prelaunch-property-tabs">
         <button class="prelaunch-tab-btn active" data-target="prelaunch-melange">Mantra Melange</button>
         <button class="prelaunch-tab-btn" data-target="prelaunch-magnus">Mantra Magnus &amp; Marvilla</button>
+        <button class="prelaunch-tab-btn" data-target="prelaunch-mayfair">Mayfair River Residences</button>
       </div>
 
       <!-- Tab Contents -->
@@ -1149,6 +1462,144 @@
           
         </div>
 
+        <!-- Mayfair River Residences Content -->
+        <div class="prelaunch-pane" id="prelaunch-mayfair">
+          <div class="prelaunch-intro-card">
+            <div class="prelaunch-badge">NEW LAUNCH TOWERS</div>
+            <h3>Mayfair River Residences – Koregaon Park Annex</h3>
+            <p class="prelaunch-intro-desc">Experience luxury riverside living with 3 iconic towers featuring premium 3 &amp; 4 BHK residences and exclusive rooftop amenities.</p>
+            
+            <div class="prelaunch-specs-row">
+              <div class="spec-mini-card">
+                <span class="emoji-icon">📍</span>
+                <div class="spec-info">
+                  <h5>Koregaon Park Annex</h5>
+                  <p>Near Koregaon Park &amp; Kalyani Nagar</p>
+                </div>
+              </div>
+              <div class="spec-mini-card">
+                <span class="emoji-icon">🏞️</span>
+                <div class="spec-info">
+                  <h5>River Views</h5>
+                  <p>Select units with spectacular decks</p>
+                </div>
+              </div>
+              <div class="spec-mini-card">
+                <span class="emoji-icon">🏢</span>
+                <div class="spec-info">
+                  <h5>3 Towers</h5>
+                  <p>3 &amp; 4 BHK Luxury Residences</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="building-detail-list" style="margin-bottom: 25px;">
+              <div class="building-detail-item">
+                <span class="bullet-gold">👉</span>
+                <div class="detail-txt">
+                  <strong>Community:</strong> Exclusive gated community on a 2.5-acre land parcel
+                </div>
+              </div>
+              <div class="building-detail-item">
+                <span class="bullet-gold">👉</span>
+                <div class="detail-txt">
+                  <strong>Tower Features:</strong> Rooftop luxury amenities, elegant layouts, high-end specifications
+                </div>
+              </div>
+              <div class="building-detail-item">
+                <span class="bullet-gold">🌟</span>
+                <div class="detail-txt">
+                  <strong>Pricing:</strong> Starts from ₹2.20 Cr*
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="apartment-card-list" style="margin-top: 25px;">
+            
+            <!-- 3 BHK -->
+            <div class="apartment-spec-card">
+              <div class="apartment-header">
+                <h4>3 BHK Residences</h4>
+                <a href="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mayfair+River+Residences.+Please+share+more+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn-enquire" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 16px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast); height: auto;">
+                  <span>GET FLOOR PLAN</span>
+                </a>
+              </div>
+              <div class="apartment-body">
+                <div class="spec-row">
+                  <span>Carpet Area:</span>
+                  <strong>1391 sq.ft</strong>
+                </div>
+                <div class="spec-row">
+                  <span>Price:</span>
+                  <strong>₹2.20 Cr+*</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 BHK Ultima -->
+            <div class="apartment-spec-card">
+              <div class="apartment-header">
+                <h4>3 BHK Ultima</h4>
+                <a href="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mayfair+River+Residences.+Please+share+more+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn-enquire" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 16px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast); height: auto;">
+                  <span>GET FLOOR PLAN</span>
+                </a>
+              </div>
+              <div class="apartment-body">
+                <div class="spec-row">
+                  <span>Carpet Area:</span>
+                  <strong>1504 sq.ft</strong>
+                </div>
+                <div class="spec-row">
+                  <span>Price:</span>
+                  <strong>₹2.40 Cr+*</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 BHK -->
+            <div class="apartment-spec-card">
+              <div class="apartment-header">
+                <h4>4 BHK Residences</h4>
+                <a href="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mayfair+River+Residences.+Please+share+more+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn-enquire" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 16px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast); height: auto;">
+                  <span>GET FLOOR PLAN</span>
+                </a>
+              </div>
+              <div class="apartment-body">
+                <div class="spec-row">
+                  <span>Carpet Area:</span>
+                  <strong>1628 sq.ft</strong>
+                </div>
+                <div class="spec-row">
+                  <span>Price:</span>
+                  <strong>₹2.60 Cr+*</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 BHK Ultima -->
+            <div class="apartment-spec-card">
+              <div class="apartment-header">
+                <h4>4 BHK Ultima</h4>
+                <a href="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mayfair+River+Residences.+Please+share+more+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn-enquire" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 16px; font-size: 11px; letter-spacing: 1.5px; border-radius: 4px; background-color: var(--accent-gold); color: var(--bg-primary); font-weight: 700; transition: var(--transition-fast); height: auto;">
+                  <span>GET FLOOR PLAN</span>
+                </a>
+              </div>
+              <div class="apartment-body">
+                <div class="spec-row">
+                  <span>Carpet Area:</span>
+                  <strong>1747 sq.ft</strong>
+                </div>
+                <div class="spec-row">
+                  <span>Price:</span>
+                  <strong>₹2.80 Cr+*</strong>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -1163,6 +1614,7 @@
       <div class="video-tabs">
         <button class="video-tab-btn active" data-target="video-melange">Mantra Melange</button>
         <button class="video-tab-btn" data-target="video-magnus">Mantra Magnus</button>
+        <button class="video-tab-btn" data-target="video-mayfair">Mayfair River Residences</button>
       </div>
 
       <!-- Video Tab Contents -->
@@ -1186,6 +1638,16 @@
             <iframe src="https://www.youtube.com/embed/9181oyDKveM" title="Mantra Magnus - Mundhwa, Pune | Exclusive Project Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
+
+        <!-- Mayfair Video Pane -->
+        <div class="video-pane" id="video-mayfair">
+          <div class="video-tagline-wrapper">
+            <span class="video-tagline">Mayfair River Residences | Premium Luxury Walkthrough</span>
+          </div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/HIvC20qN24Q" title="Mayfair River Residences - KP Annex, Pune | Project Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1201,6 +1663,7 @@
       <div class="location-property-tabs">
         <button class="location-tab-btn active" data-target="location-melange">Mantra Melange (Kharadi)</button>
         <button class="location-tab-btn" data-target="location-magnus">Mantra Magnus (Mundhwa)</button>
+        <button class="location-tab-btn" data-target="location-mayfair">Mayfair River Residences (KP Annex)</button>
       </div>
 
       <!-- Tab Contents -->
@@ -1607,6 +2070,148 @@
             </div>
           </div>
         </div>
+
+        <!-- Mayfair Content Pane -->
+        <div class="location-pane" id="location-mayfair">
+          <div class="location-visual-wrapper">
+            <img src="assets/mayfair_map.webp" alt="Mayfair River Residences Location Advantage" decoding="async" width="600" height="450">
+            <button class="location-visual-zoom" aria-label="Zoom Map">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="location-categories-container">
+            <!-- Travel/Localities -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+                <h4>Connectivity &amp; Localities</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Koregaon Park &amp; Kalyani Nagar</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">2 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Viman Nagar</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Pune Railway Station</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">15 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Pune International Airport</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">15 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commercial/IT Hubs -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                  <line x1="9" y1="22" x2="9" y2="16"></line>
+                  <line x1="15" y1="22" x2="15" y2="16"></line>
+                  <line x1="9" y1="16" x2="15" y2="16"></line>
+                  <path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M12 6h.01M12 10h.01"></path>
+                </svg>
+                <h4>Commercial &amp; IT Hubs</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Cerebrum IT Park</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Eon IT Park</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">World Trade Centre</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Business Bay</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">12 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Retail & Leisure -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <h4>Retail &amp; Leisure</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">Phoenix Marketcity</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">8 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">KOPA Mall</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">10 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Seasons Mall &amp; Amanora</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">12 Mins</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hospitality & Education -->
+            <div class="location-category-box">
+              <div class="location-category-header">
+                <svg class="category-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+                <h4>Education &amp; Leisure</h4>
+              </div>
+              <div class="location-category-list">
+                <div class="location-item">
+                  <span class="location-item-name">The Westin Hotel</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">5 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">The Bishop's School</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">8 Mins</span>
+                </div>
+                <div class="location-item">
+                  <span class="location-item-name">Columbia Hospital (Manipal)</span>
+                  <span class="location-item-dots"></span>
+                  <span class="location-item-time">8 Mins</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1642,6 +2247,7 @@
       <div class="map-tabs">
         <button class="map-tab-btn active" data-target="map-melange" data-link="https://maps.google.com/?q=Mantra+Melange+Kharadi+Pune" data-whatsapp="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0">Mantra Melange (Kharadi)</button>
         <button class="map-tab-btn" data-target="map-magnus" data-link="https://maps.app.goo.gl/dzncMaeHF6cPa6Vh8" data-whatsapp="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0">Mantra Magnus (Mundhwa)</button>
+        <button class="map-tab-btn" data-target="map-mayfair" data-link="https://maps.google.com/?q=Mayfair+River+Residences+Koregaon+Park+Annex+Pune" data-whatsapp="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mayfair+River+Residences.+Please+share+more+details.&type=phone_number&app_absent=0">Mayfair River Residences (KP Annex)</button>
       </div>
 
       <span class="btn-location-gold">CONNECTIVITY &amp; LOCATION</span>
@@ -1659,6 +2265,13 @@
       <div class="map-pane" id="map-magnus">
         <div class="location-map-wrapper">
           <img src="assets/magnus_map_new.png" alt="Mantra Magnus Location Map" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Mayfair Map Pane -->
+      <div class="map-pane" id="map-mayfair">
+        <div class="location-map-wrapper">
+          <img src="assets/mayfair_map.webp" alt="Mayfair River Residences Location Map" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
         </div>
       </div>
     </div>
@@ -1693,6 +2306,7 @@
             <option value="" disabled selected>Select Property*</option>
             <option value="melange">Mantra Melange – Kharadi</option>
             <option value="magnus">Mantra Magnus – Mundhwa</option>
+            <option value="mayfair">Mayfair River Residences – KP Annex</option>
             <option value="marvilla">Mantra Marvilla – Luxury Villa</option>
           </select>
           <textarea rows="3" placeholder="Message" aria-label="Message"></textarea>
@@ -1703,7 +2317,8 @@
         <div class="contact-overlap-address">
           <span class="address-label">OUR DETAILS</span>
           <p style="margin-bottom: 8px;"><strong style="color: var(--accent-gold); font-weight: 600;">Mantra Melange:</strong> Old Mundhwa Kharadi Road, Kharadi, Pune - 411014</p>
-          <p><strong style="color: var(--accent-gold); font-weight: 600;">Mantra Magnus:</strong> Mundhwa, Pune - 411036</p>
+          <p style="margin-bottom: 8px;"><strong style="color: var(--accent-gold); font-weight: 600;">Mantra Magnus:</strong> Mundhwa, Pune - 411036</p>
+          <p><strong style="color: var(--accent-gold); font-weight: 600;">Mayfair River Residences:</strong> Koregaon Park Annex, Pune - 411001</p>
           <div style="margin-top: 10px; display: flex; align-items: center; gap: 8px;">
             <a href="tel:7387522292" style="color: var(--accent-gold); display: flex; align-items: center;" aria-label="Call 7387522292">
               <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
@@ -1739,6 +2354,7 @@
           <ul>
             <li><a href="#melange">Mantra Melange (Kharadi)</a></li>
             <li><a href="#magnus">Mantra Magnus (Mundhwa)</a></li>
+            <li><a href="#mayfair-about">Mayfair River Residences (KP Annex)</a></li>
           </ul>
         </div>
 
@@ -1761,6 +2377,14 @@
                 <strong class="rera-no">P52100078851</strong>
               </div>
             </div>
+            <!-- Mayfair River Residences RERA -->
+            <div class="rera-item">
+              <img src="assets/mayfair_rera_qr.png" alt="Mayfair River Residences MahaRERA QR Code" class="footer-rera-qr" loading="lazy" decoding="async" width="110" height="110">
+              <div class="rera-number-box">
+                <span class="rera-label">Mayfair River RERA:</span>
+                <strong class="rera-no">P52100049704</strong>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1779,7 +2403,7 @@
           <span class="separator">|</span>
           <a href="#privacy">Privacy Policy</a>
         </div>
-        <p class="rera-disclaimer">Disclaimer: All projects listed are registered under MahaRERA. Registration Numbers: Mantra Melange - P52100079582, Mantra Magnus - P52100078851. For official verification, visit <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">MahaRERA Website</a>.</p>
+        <p class="rera-disclaimer">Disclaimer: All projects listed are registered under MahaRERA. Registration Numbers: Mantra Melange - P52100079582, Mantra Magnus - P52100078851, Mayfair River Residences - P52100049704. For official verification, visit <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">MahaRERA Website</a>.</p>
       </div>
     </div>
   </footer>
@@ -1862,6 +2486,10 @@
               <option value="magnus-3.5bhk">3.5 BHK Ultima – Mantra Magnus</option>
               <option value="magnus-4.5bhk">4.5 BHK Ultima – Mantra Magnus</option>
               <option value="magnus-garden">Magnus Garden Flats</option>
+              <option value="mayfair-3bhk">3 BHK – Mayfair River Residences</option>
+              <option value="mayfair-3.5bhk">3 BHK Ultima – Mayfair River Residences</option>
+              <option value="mayfair-4bhk">4 BHK – Mayfair River Residences</option>
+              <option value="mayfair-4.5bhk">4.5 BHK Ultima – Mayfair River Residences</option>
               <option value="marvilla">Mantra Marvilla (5 BHK Villa)</option>
             </select>
           </div>
@@ -1920,7 +2548,7 @@
     </div>
   </div>
 
-  <script src="script.js?v=1.0.1"></script>
+  <script src="script.min.js?v=1.0.1"></script>
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -1939,12 +2567,21 @@
       }
   };
   (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/699c46ea9293fb1c3a27018d/1ji57a1cs';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/699c46ea9293fb1c3a27018d/1ji57a1cs';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    }
+    var events = ['mouseover', 'keydown', 'touchmove', 'touchstart', 'scroll'];
+    events.forEach(function(e) {
+      window.addEventListener(e, loadTawk, {once: true, passive: true});
+    });
+    setTimeout(loadTawk, 4000);
   })();
   </script>
   <!--End of Tawk.to Script-->

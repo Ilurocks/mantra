@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resetAutoSlide();
 
         // Scroll to the corresponding details section
-        const targetId = index === 0 ? '#about' : '#magnus-about';
+        const targetId = index === 0 ? '#about' : (index === 1 ? '#magnus-about' : '#mayfair-about');
         const targetEl = document.querySelector(targetId);
         if (targetEl) {
           setTimeout(() => {
@@ -271,9 +271,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Switch all page sections to the selected project (0 = Melange, 1 = Magnus)
+  // Switch all page sections to the selected project (0 = Melange, 1 = Magnus, 2 = Mayfair)
   function switchProject(index) {
-    const suffixes = ['melange', 'magnus'];
+    const suffixes = ['melange', 'magnus', 'mayfair'];
     const suffix = suffixes[index];
 
     // Hero slider
@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================
      12. About, Highlights & Plans Section Entrance Animation (Scroll Trigger)
      ========================================== */
-  ['about', 'magnus-about', 'project-highlights', 'project-plans', 'project-amenities', 'location-advantage', 'about-mantra'].forEach(id => {
+  ['about', 'magnus-about', 'mayfair-about', 'project-highlights', 'project-plans', 'project-amenities', 'location-advantage', 'about-mantra'].forEach(id => {
     const sec = document.getElementById(id);
     if (!sec) return;
     if ('IntersectionObserver' in window) {
@@ -897,7 +897,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btnSubmit.disabled = true;
       btnSubmit.innerHTML = '<span>SENDING...</span>';
 
-      const selectedProp = property === 'melange' ? 'Mantra Melange' : (property === 'magnus' ? 'Mantra Magnus' : (property === 'marvilla' ? 'Mantra Marvilla' : 'Mantra Properties'));
+      const selectedProp = property === 'melange' ? 'Mantra Melange' : (property === 'magnus' ? 'Mantra Magnus' : (property === 'mayfair' ? 'Mayfair River Residences' : (property === 'marvilla' ? 'Mantra Marvilla' : 'Mantra Properties')));
 
       // Send to Email via FormSubmit
       const formData = {
@@ -1100,6 +1100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupAmenitiesSlider('amenities-melange', 'btn-melange-amenities-prev', 'btn-melange-amenities-next');
   setupAmenitiesSlider('amenities-magnus', 'btn-magnus-amenities-prev', 'btn-magnus-amenities-next');
+  setupAmenitiesSlider('amenities-mayfair', 'btn-mayfair-amenities-prev', 'btn-mayfair-amenities-next');
 
   /* ==========================================
      19. Pre-Launch & Exclusive Configurations Tab System

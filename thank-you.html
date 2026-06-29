@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-M36Z3D9C');</script>
+  <script>
+  (function(){
+    function loadGTM() {
+      if (window.gtmLoaded) return;
+      window.gtmLoaded = true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M36Z3D9C');
+    }
+    var events = ['mouseover', 'keydown', 'touchmove', 'touchstart', 'scroll'];
+    events.forEach(function(e) {
+      window.addEventListener(e, loadGTM, {once: true, passive: true});
+    });
+    setTimeout(loadGTM, 3500);
+  })();
+  </script>
   <!-- End Google Tag Manager -->
   
   <meta charset="UTF-8">
@@ -19,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css?v=1.0.3">
+  <link rel="stylesheet" href="style.min.css?v=1.0.3">
   
   <style>
     /* Content wrapper to center the card, adjusting for fixed header */
@@ -200,6 +213,15 @@
                   <h4 class="mega-card-title">Mantra Magnus</h4>
                   <p class="mega-card-subtitle">Mundhwa <span>•</span> Ongoing Project</p>
                 </a>
+
+                <!-- Card 3 -->
+                <a href="#" class="mega-card" data-filter="residential" data-hero-index="2">
+                  <div class="mega-card-img-wrapper">
+                    <img src="assets/mayfair_river.webp" alt="Mayfair River Residences" loading="lazy" decoding="async" width="280" height="180">
+                  </div>
+                  <h4 class="mega-card-title">Mayfair River Residences</h4>
+                  <p class="mega-card-subtitle">Koregaon Park Annex <span>•</span> New Launch</p>
+                </a>
               </div>
             </div>
           </li>
@@ -250,6 +272,7 @@
         <div class="drawer-submenu">
           <a href="./#projects" class="drawer-sublink" data-filter="residential" data-hero-index="0">Mantra Melange</a>
           <a href="./#projects" class="drawer-sublink" data-filter="residential" data-hero-index="1">Mantra Magnus</a>
+          <a href="./#projects" class="drawer-sublink" data-filter="residential" data-hero-index="2">Mayfair River Residences</a>
         </div>
       </li>
       <li><a href="https://api.whatsapp.com/send/?phone=917387522292&text=Hello%2C+I+am+interested+in+Mantra+Properties.+Please+share+more+details.&type=phone_number&app_absent=0" class="drawer-link" target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a></li>
@@ -323,6 +346,7 @@
           <ul>
             <li><a href="./#about">Mantra Melange (Kharadi)</a></li>
             <li><a href="./#projects">Mantra Magnus (Mundhwa)</a></li>
+            <li><a href="./#projects">Mayfair River Residences (KP Annex)</a></li>
           </ul>
         </div>
 
@@ -345,6 +369,14 @@
                 <strong class="rera-no">P52100078851</strong>
               </div>
             </div>
+            <!-- Mayfair River Residences RERA -->
+            <div class="rera-item">
+              <img src="assets/mayfair_rera_qr.png" alt="Mayfair River Residences MahaRERA QR Code" class="footer-rera-qr" loading="lazy" decoding="async" width="110" height="110">
+              <div class="rera-number-box">
+                <span class="rera-label">Mayfair River RERA:</span>
+                <strong class="rera-no">P52100049704</strong>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -363,7 +395,7 @@
           <span class="separator">|</span>
           <a href="./#privacy">Privacy Policy</a>
         </div>
-        <p class="rera-disclaimer">Disclaimer: All projects listed are registered under MahaRERA. Registration Numbers: Mantra Melange - P52100079582, Mantra Magnus - P52100078851. For official verification, visit <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">MahaRERA Website</a>.</p>
+        <p class="rera-disclaimer">Disclaimer: All projects listed are registered under MahaRERA. Registration Numbers: Mantra Melange - P52100079582, Mantra Magnus - P52100078851, Mayfair River Residences - P52100049704. For official verification, visit <a href="https://maharera.maharashtra.gov.in" target="_blank" rel="noopener noreferrer">MahaRERA Website</a>.</p>
       </div>
     </div>
   </footer>
@@ -391,7 +423,7 @@
   </div>
 
   <!-- JS Scripts to support header/drawer navigation and populate form details dynamically -->
-  <script src="script.js"></script>
+  <script src="script.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Fetch details from sessionStorage
@@ -423,12 +455,21 @@
       }
   };
   (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/699c46ea9293fb1c3a27018d/1ji57a1cs';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
+    function loadTawk() {
+      if (window.tawkLoaded) return;
+      window.tawkLoaded = true;
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/699c46ea9293fb1c3a27018d/1ji57a1cs';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    }
+    var events = ['mouseover', 'keydown', 'touchmove', 'touchstart', 'scroll'];
+    events.forEach(function(e) {
+      window.addEventListener(e, loadTawk, {once: true, passive: true});
+    });
+    setTimeout(loadTawk, 4000);
   })();
   </script>
   <!--End of Tawk.to Script-->

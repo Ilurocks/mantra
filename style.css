@@ -5657,6 +5657,17 @@ section {
   }
 }
 
+.hero-bg-mayfair {
+  background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/mayfair_river_mobile.webp');
+  background-position: center center;
+}
+@media (min-width: 768px) {
+  .hero-bg-mayfair {
+    background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.45)), url('assets/mayfair_river.webp');
+    background-position: center 15%;
+  }
+}
+
 /* ============================================
    THANK YOU POPUP MODAL STYLING
    ============================================ */
@@ -5953,5 +5964,270 @@ section {
     left: 10px !important;
     right: auto !important;
     bottom: 80px !important;
+  }
+}
+
+/* --- Mobile polish for the newly added property sections --- */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header {
+    height: 72px;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .nav-phone {
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+
+  .logo-image {
+    height: 34px;
+  }
+
+  .hero {
+    height: 100svh;
+    min-height: 660px;
+  }
+
+  .hero-main-title {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+    line-height: 1.08;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-info-panel {
+    padding: 14px 14px 16px;
+  }
+
+  .panel-container {
+    gap: 8px;
+  }
+
+  .brand-tabs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .brand-tabs-wrapper .project-brand {
+    order: -1;
+    grid-column: 1 / -1;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    border: 0;
+  }
+
+  .hero-tab-btn {
+    width: 100%;
+    min-width: 0;
+    padding: 7px 6px;
+    font-size: 8.5px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .brand-main {
+    font-size: clamp(22px, 7vw, 30px);
+    line-height: 1;
+  }
+
+  .brand-sub,
+  .details-status {
+    overflow-wrap: anywhere;
+  }
+
+  .details-top {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .details-title {
+    font-size: clamp(17px, 5vw, 22px);
+    line-height: 1.22;
+  }
+
+  .panel-right {
+    gap: 8px;
+  }
+
+  .btn-panel {
+    min-height: 42px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero-dots {
+    bottom: 230px;
+  }
+
+  .float-actions {
+    display: flex;
+    right: 14px;
+    bottom: 18px;
+    z-index: 9000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  }
+
+  .header.scrolled ~ .float-actions {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .section-title-dark,
+  .highlights-title,
+  .plans-title,
+  .prelaunch-title,
+  .location-advantage-title,
+  .location-map-title {
+    overflow-wrap: anywhere;
+  }
+
+  .highlights-section,
+  .plans-section,
+  .project-amenities-section,
+  .prelaunch-section,
+  .location-advantage-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .plans-container,
+  .location-advantage-container,
+  .prelaunch-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .plan-display-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .plan-slider-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+  .plan-slide-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .plan-slide-arrow.prev {
+    left: 10px;
+  }
+
+  .plan-slide-arrow.next {
+    right: 10px;
+  }
+
+  .plan-detail-title {
+    font-size: 17px;
+  }
+
+  .plan-detail-desc {
+    font-size: 12.5px;
+  }
+
+  .location-item {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .location-item-name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .location-item-dots {
+    display: none;
+  }
+
+  .contact-overlap-container,
+  .footer-container,
+  .about-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 14px;
+  }
+
+  .nav-phone {
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 690px;
+  }
+
+  .hero-info-panel {
+    padding: 12px 12px 14px;
+  }
+
+  .hero-dots {
+    bottom: 238px;
+  }
+
+  .hero-tab-btn {
+    font-size: 8px;
+    padding: 7px 4px;
+  }
+
+  .btn-panel {
+    font-size: 8px;
+    letter-spacing: 0.6px;
+    padding: 10px 4px;
+  }
+
+  .details-top {
+    font-size: 11.5px;
+  }
+
+  .amenities-box-container {
+    padding: 34px 14px;
+  }
+
+  .amenities-slider-inner {
+    gap: 16px;
+    padding-inline: 2px;
+  }
+
+  .amenity-slide-item {
+    flex-basis: 104px;
+  }
+}
+
+@media (min-width: 769px) {
+  .float-actions {
+    z-index: 9;
   }
 }
