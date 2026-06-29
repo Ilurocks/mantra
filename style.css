@@ -2652,6 +2652,13 @@ section {
     background-color: rgba(197, 168, 128, 0.05);
   }
 
+  .footer-phone-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   .footer-phone-btn {
     display: inline-flex;
     align-items: center;
@@ -2682,6 +2689,7 @@ section {
     font-size: 14px;
     letter-spacing: 0.5px;
     transition: var(--transition-fast);
+    white-space: nowrap;
   }
 
   .footer-phone-link:hover {
@@ -3368,6 +3376,10 @@ section {
 
     .footer-brand {
       align-items: center;
+    }
+
+    .footer-phone-container {
+      justify-content: center;
     }
 
     .social-links {
