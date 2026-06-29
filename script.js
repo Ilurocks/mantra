@@ -897,7 +897,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btnSubmit.disabled = true;
       btnSubmit.innerHTML = '<span>SENDING...</span>';
 
-      const selectedProp = property === 'melange' ? 'Mantra Melange' : (property === 'magnus' ? 'Mantra Magnus' : (property === 'mayfair' ? 'Mayfair River Residences' : (property === 'marvilla' ? 'Mantra Marvilla' : 'Mantra Properties')));
+      const selectedProp = property === 'melange' ? 'Mantra Melange' : (property === 'magnus' ? 'Mantra Magnus' : (property === 'mayfair' ? 'Mayfair Residences' : (property === 'marvilla' ? 'Mantra Marvilla' : 'Mantra Properties')));
 
       // Send to Email via FormSubmit
       const formData = {
